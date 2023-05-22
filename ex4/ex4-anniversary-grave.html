@@ -1,0 +1,621 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - ex4-anniversary-grave</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_295d0e767e69da88045ada76f88d9631.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>Temp Archives 1 / ex4-anniversary-grave</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-920063376116301844 class=chatlog__message-container data-message-id=920063376116301844><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-920063376116301844>12/13/2021 4:23 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>----</span></div></div></div></div><div id=chatlog__message-container-920063394575446017 class=chatlog__message-container data-message-id=920063394575446017><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/13/2021 4:23 PM">16:23</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Mrawry&#39;s Role</strong>
+
+Return of the Thunderdome - The Epic Clash - Town Investigative
+
+&gt;&gt; Alright Meeting time.
+&gt;&gt; What&#39;s the issue.
+&gt;&gt; I think Thunderdomes provoque toxicity and problems in games. They need to stop.
+&gt;&gt; What?! Are you insane? Name one time a thunderdome resulted in toxicity.
+&gt;&gt; UHH~ You and Duncan, You and Phone, You and Me, Jaiden and Todd, Phone and Nashed need I go on?
+&gt;&gt; Ok Ok Fair Point....
+&gt;&gt; So Stop the damned Thunderdomes.
+&gt;&gt; No
+
+Vote Analysis: Every night you may target a player (excluding yourself) that has voted during the past day, you will receive the alignment of the player your target voted.
+
+Thunderdome Analysis (passive): If your target voted someone who also voted your target (hidden or openly) then you will know and also check your targets alignment.
+
+Thunderdome Madness (Passive): If you vote a player that is voting you, then your vote power is secretly DOUBLED (not +1 -&gt; it&#39;s x2, so if you had 2 votes, now it&#39;s 4.). The votes will not be displayed in the vote counter until day end, at which they will be displayed in the final counting.
+
+Thunderdome Overload (passive): If &quot;Thunderdome Madness&quot; was triggered at the end of the past day then you may not use &quot;Thunderdome Analysis&quot; during the night after it. The same applies to if &quot;Thunderdome Analysis&quot; was applied during the past night. Additionally if &quot;Thunderdome Analysis&quot; was applied during the last night, then &quot;Thunderdome Madness&quot; will be deactivated during the next day.
+
+Goal: Take down those who oppose the town.</span> <span class=chatlog__edited-timestamp title="12/13/2021 4:23 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-920421688364138587 class=chatlog__message-container data-message-id=920421688364138587><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-920421688364138587>12/14/2021 4:07 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Adam&#39;s Role</strong>
+
+Announcement - Town Protective
+
+&gt;&gt; <strong>I HAVE AN ANNOUNCEMENT TO MAKE</strong> - Pyro
+<em>Silenece</em>
+<em>Anticipation</em>
+<em>3 hours pass</em>
+&gt;&gt; Soooo... what was the announcement? - Eqsy
+&gt;&gt; Yeah, uh, you see, that was it. - Pyro
+&gt;&gt; <em>Sighs</em> - Eqsy
+
+Announced: At night target someone, you will protect them and all of their visitors will be publicly announced, including your own name. The reason why the names were announced will not be stated.
+- The names will be posted as a single line of names without explanation in the following fashion:
+&quot;Announced: [Name 1], [Name 2], [Name x],...&quot;&lt;&lt;&lt;&lt;&lt;&lt;
+
+Staff&#39;s tool (Passive): If your target is attacked, then you will be attacked instead.
+
+Loud Mouth (Passive): Any non-town visiting you will learn that you are a Town Protective role and also that only non-town learn this information.
+
+Clueless (Passive): You are unable to receive feedback whatsoever, unless someone grants you an ability, an item or something similar that you can interact with, or requires you to choose something.
+
+Goal: Take down those who oppose the town.</span> <span class=chatlog__edited-timestamp title="12/14/2021 4:20 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-921065375561556080 class=chatlog__message-container data-message-id=921065375561556080><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-921065375561556080>12/16/2021 10:44 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Plant&#39;s Role</strong>
+
+Mafia Engine - Town Support
+
+The current version of Mafia Engine. The best and most advanced iteration yet.
+A true masterpiece, yet unfinished.
+I am almost there, everything is going smoothly. Just a little bit more. - Anonymous Bot Developer 1923
+
+Bot Status: ACCEPTED! Bot ID Number: 502JKL5739A.
+
+Order Reassignment: Target two players at night. Both players will be directed to be at the other players location that night. All visits performed on one of them will instead be performed on the other.
+- You may not relocate yourself or another Mafia Engine Chat member.
+- Other Mafia Engine Chat members IGNORE your relocation and will visit their target as planned should they visit someone you relocated.
+
+Server Restructuring [1x]: Once per game during the night you may choose to relocate every living member of the Mafia Engine Chat. For each living member choose one non-member to swap that member with.
+
+Overloaded [Passive] After using &quot;Server Restructuring&quot; you become overloaded and unable to use &quot;Order Reassignment&quot; the following night.
+The Three Prototypes [Passive] There are two other prototypes of Mafia Engine&#39;s in the game. They may be any role of any alignment, you will share a day/night chat with them.
+The Third Prototype [Passive] You are the most complete build of Mafia Engine, yet you are unfinished. Should you be the last mafia engine alive then you may use one last action of the Mafia Engine ability pool before it becomes locked and unavailable.
+
+Goal: Take down those who oppose the town.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-921149098600579082 class=chatlog__message-container data-message-id=921149098600579082><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-921149098600579082>12/16/2021 4:17 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Gamecube&#39;s Role</strong>
+
+Noose - Mafia Tactical
+
+Transcript:
+
+&gt;&gt; Hey, Hey, did that.. noose.. just move?! - Goon
+&gt;&gt; No way it did, stop drinking so much. - Mafioso
+&gt;&gt; I swear it did. I&#39;m not <em>that</em> drunk. - Goon
+&gt;&gt; Is someone talking about me, perhaps? - Noose
+&gt;&gt; Bloody hell, this.. this is creepy as hell - Mafioso
+<em>walks closer to the noose</em>
+&gt;&gt; Well, I guess fearing me has become a norm, would you say not? - Noose
+&gt;&gt; This is fucked, I&#39;m leaving - Goon</span></div></div></div></div><div id=chatlog__message-container-921149100009861230 class=chatlog__message-container data-message-id=921149100009861230><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/16/2021 4:17 PM">16:17</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&gt;&gt; No.. no, wait.. I think this isn&#39;t that bad, not that bad at all.. - Mafioso
+
+<em>static noise overrules the following conversation</em>
+
+Choose your victim (1x): Once per game and during the day, choose to activate this ability and name a target.
+If a player that is not your target is lynched that day then the lynch will be redirected to your target, and the original lynch will instead have their role name and alignment (but not sub alignment) revealed.
+If you were the one being lynched, then this ability fails.
+You cannot choose yourself as the target.
+
+Animate object (0x): You come to life, snaking through town to find a victim. Choose a player, you will start to strangle your victim tonight, roleblocking them during this night and the following day.
+- Your victim will be informed that &quot;<em>something is strangling you</em>&quot;.
+- Your victim will be informed that &quot;<em>You will die during the next night, unless someone protects you.</em>&quot;
+
+- You may not act during the following day.
+- You may not act during the following night.
+
+A double edged... rope?! (passive): This ability let&#39;s you gain charges of &quot;Animate Object&quot;, but may also take them away.
+
+- If a member of the town is lynched -&gt; Gain a charge.
+- If a neutral is lynched -&gt; Nothing happens.
+- If a member of the mafia is lynched -&gt; lose all charges you have stored, and if you are currently strangling someone, then your attack will fail during the following night.
+- If the mafia Head is lynched -&gt; lose all charges you have stored, and if you are currently strangling someone, then your attack will fail during the following night and become unable to gain any new charges.
+
+Just a Rope (Passive): You are RB immune during the nights you roleblock, but not during the nights you attack.
+
+Goal: Kill all who oppose the mafia</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-921511760987553823 class=chatlog__message-container data-message-id=921511760987553823><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-921511760987553823>12/17/2021 4:18 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Mario&#39;s Role</strong>
+
+Retired Protector - Town Support
+
+I Used to rule the world. The prosecutor of Discord Mafia. After attack of the Honda&#39;s and everything that I&#39;ve been through.... It&#39;s time for me to take my retirement. Someday I may return, nothing is official. For now... I&#39;m going to stay here and help out anyway I can. That.. I promise. 
+- The Prosecutor
+
+Veteran of the craft: Every night choose a player. You will remove negative status effects from them, and block new ones from being applied that night.
+
+Weak Minded (Passive): You cannot remove brain washing from anyone, and if you visit a brain washed target, or a brain washer, then you will become brain washed yourself.
+
+Last ace up your sleeve: Each day pick a player, if you die during the same day, or the following night, then the alignment of that player will be publicly revealed.
+
+Goal: Take down those who oppose the town.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-922239136100921384 class=chatlog__message-container data-message-id=922239136100921384><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-922239136100921384>12/19/2021 4:29 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Ironfire&#39;s role</strong>
+
+Dragon - Neutral Evil
+
+Staff logs:
+&gt;&gt; Hey, Lune.. - Eqsy
+&gt;&gt; Yeah? - Lune
+&gt;&gt; Dragon has become way too powerful recently, and with the wormhole opening we have to do something. - Eqsy
+&gt;&gt; I mean, I don&#39;t <em>really</em> mind it, but I can see it.. I guess?! - Lune
+&gt;&gt; Yeah, we really have to act. Any ideas? - Eqsy
+&gt;&gt; I guess we can just kick him lol, his waifu is trash anyway <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🤣"
+    title="rofl"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f923.svg"> - Lune
+&gt;&gt; <em>confused looks</em> .. Anyway, kicking sounds good, but what if he just rejoins? - Eqsy
+&gt;&gt; Don&#39;t worry.. we&#39;ll just have nashed nashednuke dragons Wifi, it&#39;ll be fiiine - Lune
+&gt;&gt; .. alright, we&#39;ll do that. Commence operation.  - Eqsy
+&gt;&gt; Got it chief. - Lune
+
+- End of log, totally the staff log. Yes. No doubt this happened.
+
+Kimono Anivia&#39;s wings will guide you [3x]: During the night, choose another player, you and that player will be unvisitable that night, any visits performed on the both of you that phase will fail, any visitors will be informed that their target was missing.
+
+99 K levels deep and still going: Target someone, their alignment will be shown as the opposite to investigatives that night. (non town -&gt; Town | Town -&gt; Mafia)
+
+Cute like a cat (Passive): Any evil faction attempting to attack you will instead be told that you are a neutral evil, the first time they attack you. If the same faction attacks you again, then they will attack you as usual.
+
+Nice Person [3x]: You&#39;re just generally nice to everyone, as a result are you pretty likeable and people are more reluctant to vote you. (You will also be lynched by majority one vote later than normal and in a plurality tie the other one will die.)
+
+Ensure the towns destruction before or after your death.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-922597223093645363 class=chatlog__message-container data-message-id=922597223093645363><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-922597223093645363>12/20/2021 4:11 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Mike&#39;s Role</strong>
+
+Nashed - Town Investigative.
+
+Log 001 - My first mafia game, I met a cool guy named JacksonVirgo. We&#39;re sharing a neighbourhood together It&#39;s been a blast. Trust is not a strongsuit for me so I have absolutely no clue if they&#39;re legit or not. ~~~ They did this huge Fancy Play and caught a mafia! Guess I better trust them! They&#39;re brilliant I swear. - October 2019
+
+Log 002 - I decided to invite Jackson to my server, they keep requesting admin for goodness sake. I do trust them and all but I like the way the staff team is for now. - November 2019
+
+Log 003 - Jackson is now known as Nashed. I decided to make them staff, not sure how things will go...... 
+
+Log 004 - I Gave them owner but apparently a fight broke loose.... They&#39;re both gone. The server is dead
+
+Log 005 - Nashed is back and we&#39;re ready to revamp the server. With his intelligence he&#39;s developing various prototypes of a bot called Mafia Engine to help out the server. I admire him sometimes but don&#39;t want to admit it. 
+
+Abilities:
+Observation: [3x] During the night watch a player, you will be informed of who visits them and who they visit. 
+
+Fancy Play Syndrome [2x] During the night you may perform a fancy play. Target a player, should you get them lynched the following day you may reveal the role, alignment and sub-alignment of a player of your choosing.
+
+Prototype Testing: [1x] You are aware there are 3 mafia engine prototypes, they all share a group chat. As your night action, you may decide to join their chat starting the following day. Everyone in that neighbourhood could be of any alignment and they will not know your role. - You may not gain any positive or negative effects distributed or present in the neighbourhood besides gaining access and the ability to talk in it
+
+
+Goal: Take down those who oppose the town.</span></div></div></div></div><div id=chatlog__message-container-922597364651409408 class=chatlog__message-container data-message-id=922597364651409408><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/20/2021 4:12 PM">16:12</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Augie&#39;s Role</strong>
+
+Pollmaster - Town Power
+
+&gt;&gt; We should really add an @polls role. - Lune
+&gt;&gt; Why? What&#39;s the point? - Eqsy
+&gt;&gt; So that people, that want to see the polls, can get notified? - Lune
+&gt;&gt; Eh, it&#39;s just clutter though.. - Eqsy
+&gt;&gt; One day you&#39;ll be grateful I did this. - Lune
+&gt;&gt; Sure. Go ahead. - Eqsy
+&gt;&gt; Trust me, what could go wrong? The channel coming to life pinging everyone with polls? - Lune
+&gt;&gt; Yeah right. As I said, go ahead. - Eqsy
+
+Extended arm of the people&#39;s voice: Target someone every day, at night start a poll will be posted in the info channel, it will have options in it that everyone can vote on, each option names one thing that could happen to your target. The votes will be made public at the end of the night and the action with the most votes will be chosen.
+The name of the target will be revealed.
+Only the amount of votes will be made public, no names will be revealed. You may also vote and stay anonymous throughout the whole thing. 
+You have to choose at least two of the options and may at most choose 4.
+Voting is done in everyone&#39;s player chat.
+People may decide to not vote. The number of people not voting will not be listed.
+You cannot be role blocked doing this.
+
+Options:
+
+Note: Some options you can only put into your polls for a limited number of times.
+
+- Protect 
+- Role block
+- Purge (1x) (protect + remove negative status effects)
+- Attack (2x)
+- Alignment check (2x)
+- Lookout (2x)
+- track (2x)
+- Make unable to vote the next day (2x)
+- Make them a double voter the next day (2x)
+
+Voice of the People (passive): Your vote will count as 2 in every poll you participate in.
+
+Final Word [1x]: Once per game during the night you may overpower everyone elses votes and decide the outcome of the poll yourself.
+- By doing so will you be revealed as the pollmaster at the start of the next day.
+
+Goal: Take down those who oppose the town.</span></div></div></div></div><div id=chatlog__message-container-922597847407403089 class=chatlog__message-container data-message-id=922597847407403089><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/20/2021 4:14 PM">16:14</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Phone&#39;s Role</strong>
+
+Melikey - Mafia Support
+
+Transcript
+2019/11/25 - Likey and I made a server! Discord Mafia All Any sounds like fun!
+2019/12/04 - Xlranet came to me with the idea of merging this server. Likey says it&#39;ll be fun!
+2019/12/25 - The server is a month old. I&#39;m so proud of what we&#39;ve accomplished!
+2020/05/11 - I&#39;ve decided to make Likey the Owner. I think she&#39;ll do a great job. I&#39;ll return someday.
+2020/08/25 - I&#39;m back... Likey is gone though. Ever since the incident of the wormhole. She just hasn&#39;t been the same. Blames it on college and work but I know she&#39;s gone... She&#39;s gone.. She&#39;s gone... There&#39;s nothing we can do to bring her back..
+2020/11/25 - The server is a year old. It&#39;s hard to believe without her. This server wouldn&#39;t exist to this day
+2021/11/25 - Something is wrong.. I can feel it...
+2021/11/29 - Likey is back.
+2021/11/30 - It&#39;s not Likey.
+
+Abilities
+Popcorn Man Enthusiast: [1x] At any time during the game you may hand a player a gun. They may then publicly shoot someone during the day.
+Push the Button: During the night you may host a meeting, doing so will roleblock you for the night but you will gain a charge for the ability: Eject
+Eject: [0x] Select a player, you will be informed of their Alignment and sub-alignment. I.E [Player A is Town Support]
+
+Goal: Kill all who oppose the mafia</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-922968711281917962 class=chatlog__message-container data-message-id=922968711281917962><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/387583392759283713/b9aa8588137ae9be5d4f052a34227016.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(37,95,105) title=EqsyLootz#2051 data-user-id=387583392759283713>EqsyLootz</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-922968711281917962>12/21/2021 4:48 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Time&#39;s Role</strong> - COD: Shot by James. 
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Mafia Engine - Town Support
+
+The development of the Engine that will one day drive the entire server has proceeded well and appears to show its first fruit.
+We are now able to control parts of the server.
+Everything is going according to plan, just a little bit more..
+
+OOP, got to recode everything for the next few steps, aha.
+Well, for now let&#39;s put this one into active duty. - Anonymous Bot Developer 1923
+
+Bot Status: ACCEPTED! Bot ID Number: 302K476L3323.
+
+Lockdown: Target a player every night. Any visitors of your target will have their visit fail, unless the visit was either an attack or a protective visit, or a visit by another mafia engine.
+Group Security [1x]: Once per game during the night you may choose to use Lockdown on any other alive mafia engines and yourself.
+
+Secure Code [Passive] You cannot be role blocked.
+The Three Prototypes [Passive] There are two other prototypes of Mafia Engine&#39;s in the game. They may be any role of any alignment, you will share a day/night chat with them.
+The Second Prototype [Passive] Should the first prototype die, then you may choose which, if any, Mafia Engine ability should be used.
+
+Goal: Take down those who oppose the town.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-923320661823344700 class=chatlog__message-container data-message-id=923320661823344700><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/387583392759283713/b9aa8588137ae9be5d4f052a34227016.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(37,95,105) title=EqsyLootz#2051 data-user-id=387583392759283713>EqsyLootz</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-923320661823344700>12/22/2021 4:06 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Algebra: Lynched Day 4</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Server Boost Goals - Neutral Evil
+
+Eqsy: Everyone sit down. Let&#39;s talk about Server boosting. Is it an essential? Is it a good thing?
+Nashed: No screw off, Nitro does something bad to the environnement by using NFT crypto currency.
+Lune: WELL I personally think it&#39;d be fun to have new emojis.
+Quack: It&#39;s a waste of money really.
+Eqsy: Well look, I&#39;m lazy I really don&#39;t care.
+Nashed: Server Boost Goals are Evil.
+Eqsy: Uhhhhh
+Nashed: Exactly.
+Lune: :Confusedd:
+
+Boost Coins: You earn a boost coin every time a member of the town is flipped in the graveyard.
+
+Booster perks: You gain benefits and abilities when certain milestones of town members dying are reached.
+
+Perks:
+
+5 Dead town - You gain a one shot night immunity.
+7 Dead town - You are seen as a &quot;Town&quot; to alignment checkers, your sub alignment will stay Evil.
+10 Dead town - You become role block immune.
+15 Dead town - You gain a one-shot lynch immunity.
+
+Coin Shop: During the day You may use your Boost Coins (BC) to shop for abilities to use during the next night.
+
+NOTE: You may only make one purchase every day.
+
+2 BC - One-shot night roleblock action for the next night (Other role blockers resolve before you unless you have the RB Immunity perk).
+2 BC - One-shot night alignment check for the next night.
+3 BC - One-shot night redirect action for the next night.
+3 BC - One-shot night make someone a double voter the next day.
+4 BC - One-shot night inform someone that you are a Neutral Evil.
+5 BC - (One time purchase) One-shot night create a private chat with someone.
+
+Ensure the towns destruction before or after your death.</code></span></div></div></div></div><div id=chatlog__message-container-923321677927047228 class=chatlog__message-container data-message-id=923321677927047228><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/22/2021 4:10 PM">16:10</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Pyro. COD: Vaporized by Zach</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Antonio, Leader of the Warlocks - Neutral Chaos
+
+For a long time has the Antonio Clan prepared for the wormnhole to open once again.
+You were prepared.. How couldn&#39;t you have been?
+You were the one triggering the wormhole in the first place!
+laughs maniacally
+Now it is time to reap those poor souls intertwined with it.
+
+Unlimited Power (Passive): Tap into the power of the wormhole, you cannot die to anything but lynching or lynch like effects.
+
+Disguised Menace (Passive): You are seen as a member of the town to investigative checks that check for alignment.
+
+Mind Control: Each phase pick another player to visit. If you successfully visit someone, then you will brainwash them without them knowing about it. You will know who you visited.
+- Brain washing cannot be removed by anything unless specifically stated.
+- Mind Control being applied cannot be blocked by anything, unless specifically stated, if your visit was successful.
+
+Mind Break (Passive): If you visit a brainwashed player for a second time, then they will die.
+
+Hunted (Passive): Someone is after you, hunting you. You will be lynched at half majority as long as your hunter is alive.
+
+Goal: Brain wash the entire town. Once you do this you are declared the winner and the game will end in your victory.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-925493990390894593 class=chatlog__message-container data-message-id=925493990390894593><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/387583392759283713/b9aa8588137ae9be5d4f052a34227016.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(37,95,105) title=EqsyLootz#2051 data-user-id=387583392759283713>EqsyLootz</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-925493990390894593>12/28/2021 4:02 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Quack: Killed Night 4</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Genie - Town Killing
+Log#001 - 2019-11-05 02:09: First creation and submission of the &quot;genie&quot; project initiated by doc. prof. Quack. High promise and vast possibilities lie ahead. Monitoring any future results is key to this projects success. - Eqsylootz
+
+Log#034 - 17.12.2019 22:17: A first major experiment showed vast success, according to Doc. prof. Quack, that is. Many of our investors have become sceptical however, they didn&#39;t like the seemingly unlimited potential the creation has. It is almost fear inducing how powerful the subject is. - Eqsylootz
+
+Voice-Log#24 - REDACTED: Something happened today. It... it became SENTIENT. HOW COULD THIS HAVE BEEN? friction noises distorting audio, recorder seems to be running Heavy breathing is audible The, the subject has.. awoken. How could this have happened? more heavy breathing Siren&#39;s now go off in the background. It is fine, we should have this under control, I reached the evacuation shelter, backup should be on its way, lets hope it is not too late. End of Audio Recording staff - dr. prof. Quack
+
+Conversational Log:
+Interrogator L.: So you have known about the potential &quot;awakening&quot; as you call it from the very start?
+Q.: No, I figured it out during the first major test in 2019. I knew then.
+Interrogator L.: And you have not written down or informed anyone of your findings?
+Q.: No, I have not.
+Interrogator L.: Why is that? Depending on your answer major or minor disciplinary measures will be enacted.
+Q.: I did not want my experiment to fail. That is all I have to say.
+Interrogator L.: Thank you for your answers, that is all. You will now be escorted to your cell in REDACTED until further notice.
+
+- End of transcript.
+
+Log#359 - REDACTED: REDACTED subject has broken into the cellblock and successfully freed Q. They have both vanished after the REDACTED touched Q.. - L</code></span></div></div></div></div><div id=chatlog__message-container-925493997701562418 class=chatlog__message-container data-message-id=925493997701562418><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/28/2021 4:02 PM">16:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Wish Denied [3x]: Thrice per game target someone during the day.
+Your target will be informed that they may wish for anything at the start of the following night.
+You will know what they wished for the following day start and you may decide to attack your target after hearing their choice. 
+You may target a new player the same day you decide to attack or not attack. 
+The attacked player will be attacked at the end of the day phase.
+If you kill a member of the town then you may use your remaining charges, but you are not allowed to attack again. 
+The wishes themselves will never be granted.
+
+Death Wish? [1x]: Once per game, instead of &quot;Wish Denied&quot;, target someone during the day.
+At the start of the following night they will be asked: &quot;Would you like to kill someone?&quot; And the host will tell them they can reply with either &quot;yes&quot; or &quot;no&quot;.
+You will be informed of their answer at the start of the following day. 
+During the following day you may then, after seeing their choice, decide whether to give them a day-vig gun or not.
+If you decide to do so, then they will be informed of receiving said gun. They may use it by typing /shoot (player) @host in the voting channel that day only and it will an attack to the target.
+If you decide against doing so then this action will be voided. 
+Your target will not be informed of your choice and will not know you did any of this beyond what was stated.
+You may initiate &quot;Wish denied&quot; the same day you do or do not give out the gun.
+
+Rampaging Genie: You are always seen as a Neutral Killing to investigative alignment checkers.
+
+Goal: Take down those who oppose the town.</code></span></div></div></div></div><div id=chatlog__message-container-925494127578198046 class=chatlog__message-container data-message-id=925494127578198046><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/28/2021 4:03 PM">16:03</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Kon - Killed Night 4</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Akato - Town Specialist.
+
+Logs 036
+- I have observed two.. Interesting users fangirling over a Terraria Calamity mod character known as Yharon. Yharon.. Has a son, Akato. Pyro keeps claiming he&#39;s real... I&#39;m questioning their sanity now.
+- Eqsy
+
+Logs 323
+- In the events following the wormhole.......
+Pyro was right
+- Eqsy
+
+Abilities:
+Son of the Dragon of the Jungle: Using herbs, during the night you may visit a player, doing so will heal them giving them immunity and will cure all active statuses.
+
+Forgotten Egg: [Passive] Should you be visited three times at Night during the course of the game you will hatch unlocking you new abilities.
+~ These Abilities Only Unlock AFTER you have been visited ~
+
+Revenge: [1x] You may choose to publicly kill a player of your choice during the day.
+Cuteness [2x] During the night you may visit a player roleblocking them by being a cute dragon ^-^
+Stay Back [Passive] - You are now Roleblock Immune
+
+Goal: Take down those who oppose the town.</code></span></div></div></div></div><div id=chatlog__message-container-925494339847733318 class=chatlog__message-container data-message-id=925494339847733318><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/28/2021 4:04 PM">16:04</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Kolo - Killed Night 4</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Hmmmmmm - Town Power
+
+Personal Log:
+
+Why did I sign up for this? ; _ ;
+&gt;&gt;&gt; Why did I choose this role? &gt;-&lt;
+&gt;&gt;&gt; I forgor
+&gt;&gt;&gt; What did I want to say again?
+&gt;&gt;&gt; Forgor again..
+&gt;&gt;&gt; Hm.
+&gt;&gt;&gt; Hm Hm Hmm.
+&gt;&gt;&gt; Hm.
+&gt;&gt;&gt; Hmmmmmm.
+
+- Personal Log, End.
+
+I don&#39;t know if I want to play right now [1x]: Once per game, during the night, decide to just stop playing for the next two days and nights.
+
+I don&#39;t know if I really want to lynch that player [1x]: Once per game, during the day, decide that the lynched player should flip their role name, alignment and subalignment instead. (If the role is concealed as something then that will be revealed instead).
+
+I don&#39;t know if I that player should be alive [1x]: Once per game, kill a player even though you&#39;re not really sure it&#39;s a good thing they die, but oh well.
+
+I don&#39;t know If I care, but that player shouldn&#39;t be able to do their action, really not: Target someone at night, they will be role blocked during that night. They will be told &quot;Hm&quot; instead of the usual roleblocked feedback.
+
+I&#39;m too indecisive to be distracted by such trivial matters such as this (Passive): You cannot be role blocked or redirected.
+
+Goal: Take down those who oppose the town. </code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-926123540829319238 class=chatlog__message-container data-message-id=926123540829319238><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/387583392759283713/b9aa8588137ae9be5d4f052a34227016.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(37,95,105) title=EqsyLootz#2051 data-user-id=387583392759283713>EqsyLootz</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-926123540829319238>12/30/2021 9:44 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>James</strong>: Shot by Zach Day 5
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">An Open Book - Mafia Deception
+
+Stolen official papers from staff or smth
+James, what did you expect? Decent flavour? You WISH my friend.
+Yes lune this is quite literally the flavour ^
+
+Forged Papers: With your knowledge, forging other&#39;s papers is easy for you, leaving behind corroborative evidence, indisputable and unprovable to be forged. Target a player each night, they will be seen as a member of the mafia to alignment checks.
+- This will overwrite other abilities and passives that influence how someone is seen to investigatives, unless stated otherwise in the specific ability/passive.
+
+Sticky Note: Every day, attach a sticky note to someone. If the target dies during or at the end of this day after you targeted them, or until the end of the next night, then the sticky note will be found and made public. You may write up to 200 characters onto each note.
+The sticky note will be announced like the following during the dead players reveal:
+&quot;[Player] has died(cause of death might vary) [time of death]&quot;
+&quot;They were [role] (or whatever should be here)&quot;
+&quot;A note has been found on their body, placed there by someone.&quot;
+&quot;[content of note]&quot;
+
+- You may sticky note yourself and other members of the mafia.
+
+Stolen Identity (Passive): You may give the hosts a secondary role name during pre game. You will receive a second role card at the end of night one made of that role name with a random town alignment. You are seen as that alignment and sub alignment to anyone that checks for those starting day 2 and you will additionally flip as that role should you die to lynching.
+
+Goal: Kill all who oppose the mafia</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-926248130901594202 class=chatlog__message-container data-message-id=926248130901594202><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/387583392759283713/b9aa8588137ae9be5d4f052a34227016.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(37,95,105) title=EqsyLootz#2051 data-user-id=387583392759283713>EqsyLootz</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-926248130901594202>12/30/2021 5:59 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>MTF</strong> - Lynched Day  5
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Scientist - Town Protective
+
+&gt;&gt; Yes! It was successful! The serum! It Works! ... on rats at least.
+Sighs deeply
+&gt;&gt; Sir, what will we do now that we have reached such an incredible breakthrough?
+&gt;&gt; Well, you see, the only thing left is... 
+Looks at the assistant, assessingly
+&gt;&gt; Sir, professor, you cannot mean to-
+&gt;&gt; You are right, I mean exactly that. Now, are you ready to be this serums first benefactor?
+&gt;&gt; Sir, I do not- Sir?! Hey, SIR?!?!
+&gt;&gt; Silent now- starts humming It&#39;ll be over soon, and you won&#39;t have felt a thing, trust me, I researched this my entire life!
+&gt;&gt; SI- muffled noises
+&gt;&gt; With this we can finally cure everyone being bad at mafia. FINALLY AHAHA! laughs histerically
+
+Confine: Each day target a player, you will confine them, role blocking them, but also protecting them during the following night. This additionally removes them from all private chats during the night.
+- Your target will be told that someone confined them at night.
+- If they had a private chat then the other players in it will know that your target disappeared.
+- Your target will be told that they cannot act that night.
+
+If you successfully confined your target then you may choose to perform one of the following actions in addition to role blocking and protecting them:
+
+Experiment [3x]: During the night you may decide to Experiment on your target, this can have different effects on your target.
+- If your target is a member of the Town: They will be protected the following night.
+- If your target is a non-town: They will learn your name and that you are a town protective and that they only learned this because they are non-town.
+- You will not know if the one you targeted was town or not, and if a town member is protected by you during the next night through &quot;Experiment&quot; then you will not know of this.
+
+Whisper: You may send your target a 200 letter message that they will receive at the end of the night.
+
+Goal: Take down those who oppose the town.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-927779640729301052 class=chatlog__message-container data-message-id=927779640729301052><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/387583392759283713/b9aa8588137ae9be5d4f052a34227016.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(37,95,105) title=EqsyLootz#2051 data-user-id=387583392759283713>EqsyLootz</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-927779640729301052>01/03/2022 11:25 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Kokichi</strong> - Lynched Day 6
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">All of Kokichi’s GIM Roles Combined into a Horrid Monstrosity - Mafia Head
+
+The GIM Experiment
+GIM Log #1 
+Decided to do a little experimenting. People seem to absolutely LOVE GIM and I&#39;m proud of my creation. I&#39;m curious what will happen if I start blending roles together. Not sure how this will work but let&#39;s see.
+
+GIM Log #2
+Things seem to be going relatively well. The role creation was a success. This should be one of the strongest roles in all of GIM
+
+GIM Log #3
+So. Turns out.  Merging roles together seems to default them to be evil... I&#39;ll be sure to monitor this abomination of a role and keep it contained for the meantime
+
+GIM Log #4
+EVACUATION IS IN ORDER! EVACUATION! SUBJECT 0621-V3 IS MISSING! 
+
+Final GIM Log
+The amalgamation I created, is now an unstoppable killing machine It joined the mafia... Run while you still can
+Signed~ Quack Attack
+
+Modifier: [Amalgamation] Every single new day, you will morph into a brand new melted distorted role with new ability/abilities, passives etc.
+
+Passive: [Melted Body] - You have Night Immunity
+
+Goal: Destroy all who oppose the mafia</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-927972446173286441 class=chatlog__message-container data-message-id=927972446173286441><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/387583392759283713/b9aa8588137ae9be5d4f052a34227016.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(37,95,105) title=EqsyLootz#2051 data-user-id=387583392759283713>EqsyLootz</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-927972446173286441>01/04/2022 12:11 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Imagination&#39;s Messenger - Town Specialist
+
+Approximately an hour before game start:
+
+&gt;&gt; The last town I was in, nobody believed me when I told them of the near unstoppable doomsday.. Bunch of none believers died for their sins. - .. Zach?
+&gt;&gt; Wait, these aren&#39;t my memories, my thoughts? Who&#39;s there? - Zach
+&gt;&gt; Oh, it seems I didn&#39;t get you fully out of my head. Well, you see, I must&#39;ve taken over you body by chance. Sorry about that, I&#39;m sure you&#39;ll get used to it eventually. - ???
+&gt;&gt; What, no?! Get out of my body! - Zach
+&gt;&gt; No can do. There is a doomsday to stop. I might consider it after my work is done. For now, let us spread the word, kiddo. Name&#39;s Exurbia, by the by. - Exurbia
+&gt;&gt; *How old are you exactly?.. - Zach
+&gt;&gt; No answer
+&gt;&gt; sigh, okay old geezer, let&#39;s do this. - Zach
+
+Doomsday?! AGAIN?!: Every night, check if someone was marked as a doomsday bringer. Additionally, if you were to target a source of destruction with this, then you will know.
+
+Pacify: Every day, select someone to remove their doomsday bringer status from if they are in fact a doomsday bringer. Additionally, if you were to target a source of destruction with this, then you will know.
+- You cannot target anyone you targeted with this before again.
+
+Purge (1x): Once per game target someone. If they are a source of destruction, then you will purge them from this world no matter what (unstoppable). This is also counted as a lynch. Additionally, if the source of destruction is eliminated, gain an additional charge you may use on anyone.
+
+Spread the Word (Passive): The amount of currently active doomsday bringers will be announced at the end of each phase. 
+You will be announced as town once the doomsday threat is eliminated.
+
+Corrupted (Passive): If you are marked as a doomsday bringer, then all your abilities, besides &quot;Purge&quot; cannot be used anymore. Make sure not to spill the beans.. to &quot;them&quot;.
+
+Goal: Take down those who oppose the town.
+Sub-Goal: Stop doomsday from happening!</code></span></div></div></div></div><div id=chatlog__message-container-927972468222722159 class=chatlog__message-container data-message-id=927972468222722159><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01/04/2022 12:11 PM">12:11</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Zach ^ Modkilled Night 6</strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-928124982960193546 class=chatlog__message-container data-message-id=928124982960193546><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/387583392759283713/b9aa8588137ae9be5d4f052a34227016.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(37,95,105) title=EqsyLootz#2051 data-user-id=387583392759283713>EqsyLootz</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-928124982960193546>01/04/2022 10:17 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Saderen</strong> Killed Night 6</span></div></div></div></div><div id=chatlog__message-container-928124989746593882 class=chatlog__message-container data-message-id=928124989746593882><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01/04/2022 10:17 PM">22:17</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Let&#39;s VFR - Mafia Deception.
+
+Eqsy: Grunkle and Xiu... Sit Down.
+Grunkle: What
+Eqsy: There&#39;s a problem about your Salem Hall Meta.
+Xiu: What do you mean... I thought we don&#39;t associate with you guys anymore.
+Eqsy: We don&#39;t. But the problem is the players you brought over have this horrible habit of attempting something called. Vote for role.
+Xiu: But everyone knows it&#39;s a terrible strategy in Mafia-
+Eqsy: I KNOW! It&#39;s causing MASSIVE problems in the server. I want you to stop with this Town of Salem non sense.
+Grunkle: Listen moron, how do you suggest we stop VFR.
+Eqsy: Figure it out.
+- The Audio goes Static
+
+Abilities:
+Marked Player: During the night mark a player, if the marked player gets lynched the following day you may choose one of the following: 
+- They get cleaned, you learn what their role is town doesn&#39;t know.
+-  (One Charge Only) You can change their rolename, alignment and sub-alignment. (We Will make a new role)
+
+Attributes:
+Fake Claim: [Passive] Should you be lynched you will appear to be a town version of this role.
+
+Goal: Kill all who oppose the mafia</code></span></div></div></div></div><div id=chatlog__message-container-928125132621361152 class=chatlog__message-container data-message-id=928125132621361152><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01/04/2022 10:17 PM">22:17</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Duncan</strong> Killed Night 6
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Duncan DON&#39;T - Town Investigative.
+
+&gt;&gt; Duncan Please Stop I&#39;m Begging you. 
+&gt;&gt; Ok Seqsy
+&gt;&gt; . . .
+&gt;&gt; . . .
+&gt;&gt; God Damn It Duncan.
+
+Abilities:
+During the Night you may use one of the following Investigative Abilities.
+
+Duncan Why: Snoop around someone&#39;s house during the night, you will be informed if your target is Suspicious or Seems Innocent.
+
+Duncan Stop: During the night you may threaten a user that you&#39;ll do something stupid. They will panic. Based on their reaction you will be informed if they killed someone or not.
+
+Duncan WAIT: During the night you may follow a player and meddle in their business, you will be informed who your target visits and everything that happened to your target at night. I.E Roleblocks, Redirects etc.
+
+Duncan DON&#39;T: You may use each of the above abilities only once. After having used all of them once you may use all of them again.
+
+Goal: Take down those who oppose the town.</code></span></div></div></div></div><div id=chatlog__message-container-928125388897521696 class=chatlog__message-container data-message-id=928125388897521696><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="01/04/2022 10:18 PM">22:18</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Fire&#39;s role</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Harlequin - Town Protective
+
+Eqsy: Yknow Lune we really should&#39;ve specified we meant server specific role flavour. Not literal mafia flavour. The hell is a Harlequin even?
+Lune: You&#39;re the one who approved it! Apparently a Harlequin has something to do with the real mafia yeah...
+Eqsy: I was tired ok! I shouldn&#39;t of accepted this Smh.
+Lune: You&#39;re making the flavour now. Have fun! 
+Eqsy: . . .
+- Three Days Ago
+
+Distract: Each night target another player, you will distract any visitors, roleblocking everyone indiscriminately. Anyone who is immune to role blocking is unaffected by this.
+
+A sinister side (passive): If during the past day a member of the town was voted off, then you may use your &quot;distract&quot; ability on two players during the following night.
+
+Superior Allure (passive): You are immune to role blocking.
+
+Goal: Take down those who oppose the town.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-928510234371178526 class=chatlog__message-container data-message-id=928510234371178526><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/387583392759283713/b9aa8588137ae9be5d4f052a34227016.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(37,95,105) title=EqsyLootz#2051 data-user-id=387583392759283713>EqsyLootz</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-928510234371178526>01/05/2022 11:48 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Jaiden&#39;s Role</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">**Mod Lunexia : Rebellion Edition - Neutral Killing**
+You have Immunity from Attacks
+
+Years ago, when Xlranet opened up the Mafia wormhole for the first time, chaos unfolded. With the newly opened Wormhole.. Lune. No Someone disguised as Lune. An exact evil twin in a way came into play. The one known as the Rebel... The Rebel Mod designed to bring anarchy and chaos. It&#39;s been a few days since Lune; the Real one. Disappeared. No one knows what happened. 
+
+What we do know however is............ [REDACTED]
+S T O P
+L U N E
+N O 
+M A T T E R 
+T H E 
+C O S T
+- EqsyLootz
+
+Passive: [REDACTED ]. You will [REDACTED] with [REDACTED] You [REDACTED]
+- Mod Note. Some stuff was a lil too secret for your sake in this rolecard. Had to Redact some of it :). If you disagree with this decision feel free to complain in private chat.
+
+Abilities:
+Rebel&#39;s Blade: Everynight you may leave your house and go on a murderous attack. Choose a target, your target will be attacked.
+
+Moderator Abuse [2x] During the day you may target a player. You will be given their rolecard the following night.
+
+Stealthy Stab: [1x] During the day target a player and inflict them with the status bleeding. If they are not healed by the start of the next day they will die. The bleed will be publicly announced.
+
+[REDACTED] [Passive] As long as you are alive [REDACTED] grow stronger, and stronger.
+
+Goal: Destroy EVERYONE who opposes the [REDACTED]</code></span> <span class=chatlog__edited-timestamp title="01/05/2022 11:50 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-929189879827542076 class=chatlog__message-container data-message-id=929189879827542076><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/387583392759283713/b9aa8588137ae9be5d4f052a34227016.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(37,95,105) title=EqsyLootz#2051 data-user-id=387583392759283713>EqsyLootz</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-929189879827542076>01/07/2022 8:48 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Shrooms</strong> <strong>Shrooms - Town Support</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Shrooms - Town Support
+
+&gt;&gt; Hey, Eqsy, what&#39;s that? - Lune
+&gt;&gt; Not what, who, Lune.. - Eqsy
+&gt;&gt; Sure, whatever, who&#39;s that? - Lune
+&gt;&gt; I have no idea, lol. - Eqsy
+&gt;&gt; Must be someone who got swept into this messs of an incident, well, they&#39;ll be fiiine..., probably. - Eqsy
+&gt;&gt; Are you sure? - Lune
+
+- Transmission goes static
+
+A sacrifice for the superiors: Each night target a player, if they die and flip as a member of the town the next day, then you will bind yourself to them. Once you bound yourself to someone can you no longer use this ability. 
+- If you die then the person you bound yourself to will be revived.
+- You cannot bind yourself to players that can act from the grave.
+
+Going out with a bang: Should you die then you may decide to take down one other player with you. You may select that player before you die. You may change it at any time but the phase of your death, in case you changed it during that phase, then the last selection before that phase started will be taken instead.
+- This ability will not trigger if you were lynched or killed by a member of the town.
+
+Unknown Menace (passive): You are unknown, and that fact itself makes you strong, should you be alive at the start of day 8, then you gain permanent night immunity.
+
+Goal: Take down those who oppose the town</code></span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 29 message(s)</div></div>

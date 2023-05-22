@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - sp-12-deaths</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_295d0e767e69da88045ada76f88d9631.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>temp archives 2 / sp-12-deaths</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-967891968359276615 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=967891968359276615><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-967891968359276615>04/24/2022 4:57 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Alive Players</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-diff">+ = Alive
+- = Dead
+? = Missing or other funky stuff
+
+- Mike -&gt; Froggy
+- Eqsy
+- Forever
++ MTF
+- MiH
+- Shroud
+- Lauu -&gt; Lister
+- Kon -&gt; Fortlaz
+- Falsey -&gt; Gappy
+- Puppa -&gt; Melancholy
+- Virtue
+- Gabo
+- Ironfire
+- Melancholy
+- Droid
+- Kokichi
+- Adam
++ Atoms
+- How
++ Jaiden -&gt; Seb
+- Ile -&gt; Fire</code>
+<strong>Graveyard</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-diff">--- Day 1
++ Melancholy - Shinigmai - Town Killing - Modkilled
+= Adam - Sleeper Agent - Neutral Benign - Lynched
+--- Night 1 
+~
+--- Day 2
+- Falsey -&gt; Gappy - Mafia Arsonist - Mafia Tactical - Lynched
+--- Night 2
+? MiH - Devourer - Town Killing - Killed
++ Ironfire - Easily confirmable townie - Town Citizen - Killed by the Mafia
+--- Day 3
++ Lauu -&gt; Lister - Vest Maker - Town Protective - Lynched
+--- Night 3
+~
+--- Day 4
+- Gabo - Jammer - Mafia Tactical - Lynched
+--- Night 4
+~
+--- Day 5
+= How - Syndicate Cyborg - Neutral Chaos - Lynched
+--- Night 5
++ Kon -&gt; Fortlaz - Sentinel - Town Protective - Killed by the Coven
+--- Day 6
+= Mike -&gt; Froggy - Usurper - Neutral Chaos - Lynched
+--- Night 6
+= Kokichi - Geisha - Neutral Benign - Killed by Mafia &amp; Coven
+--- Day 7
+- Forever - Leaf - Coven Evil - Lynched
+--- Night 7
++ Nashed - Lulu: LoR Edition - Town Protective - Killed by the Coven
+--- Day 8
+- Virtue - Werebat - Coven Head - Lynched
+--- Night 8
++ Eqsy - Thresh: LoR Edition - Town Support - Killed by the Mafia
+--- Day 9
+= Ile -&gt; Fire - The Hidden - Neutral Killing - Lynched
+- Droid - Ashling - Coven Evil - Killed by The Hidden
+--- Night 9
++ Shroud - King - Town Power - Killed by the Mafia</code></span> <span class=chatlog__edited-timestamp title="05/13/2022 11:02 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-967892071140704256 class=chatlog__message-container data-message-id=967892071140704256><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="04/24/2022 4:57 PM">16:57</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Melancholy</strong>
+
+26) Shinigami - Town Killing
+
+First of all,  the player rolling this rolecard will see the following rolecard instead:
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">32) Better Citizen - Town Citizen.
+
+At any point in the game you may choose a player to receive a permanent vote on themselves.
+You may also designate a player that gets a one time double vote.
+Both of these will be activated the moment you died.
+
+You may change your targets for both of the above abilities at any point.
+
+Each day you get to vote in an attempt to remove the Mafia from the community.</code>
+
+They are this role though, but they will not know.
+The abilities described on &quot;better citizen&quot; will only be triggered if this role is lynched, if this happens have it flip as Better Citizen.
+
+Abilities
+
+<strong>Revival</strong> If killed at night you will die cleaned. You will then be revived at day start after one day/night cycle has passed.
+The town will be informed that &quot;[Your Name has been revived]&quot;
+You being a shinigami will not be announced and you will not know yet.
+
+Once the following night starts you will receive this rolecard and be informed you are the shinigami.
+You may no longer vote or chat with anyone else in both public and private chats.
+You gain <strong>Hunt</strong>.
+
+<strong>Hunt</strong> You will be told the names of all non-town players in the game. You may decide to attack one of them tonight, after this you will die and be flipped as the Shinigami.
+While performing this you can neither be roleblocked nor redirected. 
+Your attack is basic.
+
+Attributes
+
+If you are revived after flipping as the shinigami, you will reappear with the &quot;Better Citizen&quot; rolecard, not this rolecard.
+Players interacting with this rolecard will be treated as if this was the &quot;better citizen&quot; rolecard.</span> <span class=chatlog__edited-timestamp title="04/24/2022 4:57 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968263338104594442 class=chatlog__message-container data-message-id=968263338104594442><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-968263338104594442>04/25/2022 5:32 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Adam</strong>
+
+266) Sleeper Agent - Neutral Benign
+
+You are but a sleeper agent.. for who? You don&#39;t have a clue, it&#39;s been so long you have forgotten all about it by now... something about a foundation.. something faint glimmers in your memory but.. you just can&#39;t figure it out.
+
+For now you are winning with the town..
+
+Should you be attacked and killed by a member of the mafia, then you instead survive and join their team, gaining factional chat access and being able to perform the mafia kill. Once during the game are you able to use one of the abilities of another mafia member, even if they have already died.
+Should you be attacked and killed by a member of the coven, then you instead survive and join their team, gaining factional chat access and being able to receive the Necronomicon as the last. You gain the ability to control another player each night, with the Necronomicon you will also attack whoever you are controlling with a basic attack.
+
+Should you die to lynching, a town members attack or a neutrals attack then you will win with the town from the grave.
+Should you survive without ever being converted then you will win with the town.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-968982154195394650 class=chatlog__message-container data-message-id=968982154195394650><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-968982154195394650>04/27/2022 5:09 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Falsey -&gt; Gappy</strong>
+
+254) Mafia Arsonist - Mafia Tactical
+
+Every night you may douse a player of your choice that is not part of the mafia.
+
+You may target a member of the mafia or yourself in order to remove gasoline off of you or your team member. This will only work for gasoline placed by you.
+You may decide to incinerate all players that were doused by you up until now instead of dousing. After Incinerating once you cannot do this again.
+Igniting someone is unstoppable
+
+All players you douse are informed of being doused.
+
+You may not douse or ignite and perform the factional kill.
+You cannot perform the factional kill before you have ignited.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-969343120410038342 class=chatlog__message-container data-message-id=969343120410038342><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-969343120410038342>04/28/2022 5:03 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Ironfire</strong>
+
+242) Easily confirmable townie - Town Citizen
+
+You&#39;re an easily confirmable townie.
+
+Not so much at the start of the game, but oh well. Maybe they will recognize how confirmable you are eventually.
+
+You will receive town cred with every evil lynch wagon that you were a part of.
+Meaning, if you were part of the people that lynched an evil player during the day, you get +1 town cred.
+
+Cool right?
+
+Now let&#39;s discuss what you get for your awesome town cred!
+
+0 - You may talk and vote during the day and you may win with the town. Nice. 
+1 - You receive a oneshot night parity cop check. Yes, I know, this does nothing.
+2 - You receive a oneshot night doc heal that doesn&#39;t give feedback to anyone but you which you may only use during the night you received it. You may only use it on others. Amazing, right?
+3 - You receive your second oneshot night parity check! Found an evil?
+4 - You receive a oneshot Cop check giving you Town/Neutral or Coven/Mafia/Faction as output (can be influenced by detection immunity to show town/neutral instead)!
+5 - You are automatically revealed as your role at the start of the following day! You will receive 1 additional votes until the end of the game. You did it! You are easily confirmable now!
+
+
+Extra stuff: No other role can use abilities from your role card, so the town can be sure it&#39;s really you.. on like day 8 or something, Hooray :D!
+
+good luck.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-970068267509088316 class=chatlog__message-container data-message-id=970068267509088316><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-970068267509088316>04/30/2022 5:04 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Lauu -&gt; Lister</strong>
+
+135) Vest maker - Town Protective
+
+You are a vest maker, a skilled tailor who makes strong vests to protect from bullets, slashing attacks and the likes.
+
+Every night you may give out a vest to another player.
+The vest grants them powerful protection for the next time they are attacked. That can be during a future phase.
+You cannot grant a vest to yourself and your target will not know they have been given a vest, but both you and the target will be informed if the target was successfully protected in a matter not revealing your role, although you will not be informed which one of your targets was attacked.
+At the start of the game you only have one (1) vest to give to other players, once you run out you can spend a night at home and attempt to make a new one, visiting nobody.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-971148324642099280 class=chatlog__message-container data-message-id=971148324642099280><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-971148324642099280>05/03/2022 4:36 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Gabo</strong>
+
+4) Jammer - Mafia Tactical 
+
+- As long as you are alive choose one player per phase. If they die, their flip will be jammed, and they will instead die as &quot;unknown&quot;. 
+
+Neither you nor anyone else will know the players role. 
+Players stay jammed even if they don&#39;t die the phase you target them and they will die as &quot;unknown&quot; whenever they die after that.
+
+You may not perform the factional kill alongside jamming and you cannot target a player during the same phase another mafia member targets them.
+
+If you die then all players that died as &quot;unknown&quot; due to your jamming will be revealed and the town will be informed that the Jammer has died.</span></div></div></div></div><div id=chatlog__message-container-971148453860241479 class=chatlog__message-container data-message-id=971148453860241479><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="05/03/2022 4:37 PM">16:37</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>- - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+<strong>MiH</strong> (<strong>Now revealed because Gabo died</strong>)
+
+205) Devourer - Town Killing
+
+Devour [2x] - Devour another player that has died this game. Every time you do so gain a charge of unsatable hunger. A devoured dead player can no longer be targeted by roles that target graveyard roles. A graveyard interacting role will not consume charges if they attempt to visit a devoured dead player, they will however only be informed that their action failed on the specific dead player at the end of the night.
+
+Unsatable Hunger [0x] - Feast on another player that is currently alive. You attack them with a basic attack. If you kill a player that is not a member of the town you unlock Repentance once you used all charges of Devour and Unsatable Hunger.
+If you kill a member of the town you will die of guilt during the following night.
+
+Repentance - You now see the wrong you did, to repent you from now on protect others. Every night choose another player and grant them with protection. If the player is attacked, you will die instead.</span> <span class=chatlog__edited-timestamp title="05/03/2022 4:37 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-972245465699586110 class=chatlog__message-container data-message-id=972245465699586110><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-972245465699586110>05/06/2022 5:16 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>How</strong>
+
+345)Syndicate Cyborg - Neutral Chaos
+
+Passive:
+
+Syndicate services - At the start of the game choose one of the available numbers, you will win with the corresponding players syndicate.
+-&gt; Each factional player will be assigned to a number (randomly) so if there are 6 factionals (3cov 3maf) then the numbers will be 1 to 6 and it could look like this:
+1 - Maf
+2 - Maf
+3 - Cov
+4 - Maf
+5 - Cov
+6 - Cov
+You will not know this.
+-&gt; Depending on your choice you will be assigned to the corresponding team, now serving this team. You will be informed which one that is.
+-&gt; You will not join the faction chat, but the faction will be informed a Cyborg is serving them.
+
+Syndicate Modules - After this before the game can start, choose one of the following modules. This will determine your abilities.
+
+Assault!
+
+- 2x Emag (Electromagnetic Card)
+-&gt; Learn a players alignment.
+- 1x Energy Sword
+-&gt; Attack someone, visitors of your target will see you.
+- 1x Flash
+-&gt; Target someone, replace their feedback with &quot;You were blinded by light&quot;, also roleblock them.
+
+Medical!
+
+- 1x Hypospray 
+-&gt; Use on someone during the day, their next non-lynch death will be prevented.
+- 1x Combat Defibrillator
+-&gt; Use during the day, todays lynch will survive the lynch not triggering any on lynch effects they or others may have, be announced as survived and the night starts with no lynch instead.
+- 2x Surgical Tools
+-&gt; Use on someone to cut them open and investigate their body. Roleblocks them that night, and if successful, lets you know their sub alignment.
+
+Saboteur!
+
+- 1x Thermal vision
+-&gt; Target someone and see who visits your target and who your target visits.
+- 1x Emag (Electromagnetic Card)
+-&gt; Learn a players alignment.
+- 1x Flash
+-&gt; Target someone, replace their feedback with &quot;You were blinded by light&quot;, also roleblock them.
+- 1x Zipties
+-&gt; Tie someone up with them, making them unable to visit until they are visited by someone else to free them (roleblocks).
+
+You win with your syndicate.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-972622188802891878 class=chatlog__message-container data-message-id=972622188802891878><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-972622188802891878>05/07/2022 6:13 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Kon -&gt; Fortlaz</strong>
+
+354) Sentinel - Town Protective
+
+Energy Shield
+Each night grant another player an energy shield.
+It will stay on that player even after the night ends and will block the next basic attack that hits the player if they would otherwise die from it.
+An energy shield additionally gets discharged if the player has any votes on them at the end of any day phase.
+Placing two energy shields on the same player does not stack the effect.
+You will be notified if an energy shield is discharged, and on which player, while your target will be given the regular &quot;attacked but protected&quot; message if it was triggered by an attack.
+All energy shields in play will automatically discharge once the caster (you) dies.
+
+There is no limit to how many energy shields can be applied at the same time, but if you successfully place one, you must wait a night until you can place another.
+
+Stasis
+Each night put another player of your choise into stasis.
+They are roleblocked during that night, if the roleblock is successful, all visits on them will fail that night.
+
+You may not use this ability if you had any amount of votes at the end of the previous day, and this action will fail on anyone who is currently affected by your Energy Shield ability.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-973344085622554624 class=chatlog__message-container data-message-id=973344085622554624><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-973344085622554624>05/09/2022 6:01 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Mike -&gt; Froggy</strong>
+
+25) Usurper - Neutral Chaos
+
+Attack - None (basic)
+Defence - Basic (blocks only one attack and is disabled after that)
+
+Abilities: 
+
+- If you are the last neutral left, you may start attacking a player every night.
+
+Attributes:
+
+- If at any point the total amount of alive Neutral players (NK, NE, NB, NC) is equal or higher than the amount of other players (Town/Mafia/Coven combined) in the game the game will end and all neutrals that are alive at this time will be declared winner, regardless of their winning condition.
+
+- You know the names and roles of all neutral players at any point. You will lose their name and role if they become a role that is not neutral.
+- Neutral players cannot harm you. If you are attacked by a neutral, their attack will fail and they will be informed you were immune.
+
+- This role will ensure that there is one other neutral in the game.
+- This role will not be in the game if the game starts with neutral players amounting to half the total players rounded down -2 or more.
+- This role will be rerolled if there is more than 6 other neutrals in the game.
+
+Win condition, survive and see the neutrals outnumber everyone else.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-973692288540762222 class=chatlog__message-container data-message-id=973692288540762222><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-973692288540762222>05/10/2022 5:05 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Kokichi</strong>
+
+21) Geisha - Neutral Benign
+
+Ability:
+
+- Every night choose a player that isn&#39;t you. They will receive powerful protection from you.
+
+Attributes:
+
+- If the person you protected the last night is of a different alignment (all neutrals count as one alignment) than your target this night, you also receive powerful protection.
+- This cannot happen night 1.
+- You are not informed of what alignment your target is/was and you are not informed if you received protection for yourself or not unless you were attacked while having it.
+
+Goal: Stay alive and live until the end of the game.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-973965061708210196 class=chatlog__message-container data-message-id=973965061708210196><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-973965061708210196>05/11/2022 11:09 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Forever</strong>
+
+119) Leaf, the Coven&#39;s herbalist, Witch of the Forest - Coven Evil
+
+You are Leaf, the Witch of the Forest. You&#39;re the Coven&#39;s herbalist and able to mutate and manipulate plants in their growth as well as behaviour.
+
+<strong>Entangle</strong> - Once per day choose a player that is currently voting. Their vote will be locked and they can no longer change or remove it for this day. They will be informed that it was locked.
+
+<strong>Hold</strong> - Every night choose another player, you will hold that player with your plants, removing their ability to move for that night. They will be role blocked.
+
+<strong>Hidden away in the Forest</strong> - You have role block immunity.
+
+<strong>Necronomicon:</strong>
+
+<strong>Hold</strong> will be replaced by <strong>Strangle</strong>. 
+You may still perform <strong>Entangle</strong> during the day, and <strong>Hidden away in the Forest</strong> is upgraded.
+
+<strong>Strangle</strong> - Every night choose another player, you will command seed close to them to grow rapidly using their mass to hold and strangle your target. They will be role blocked and dealt a basic attack.
+
+<strong>Hidden away in the Forest</strong> - You are role block and detection immune.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974325344200949760 class=chatlog__message-container data-message-id=974325344200949760><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-974325344200949760>05/12/2022 11:01 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Puppa -&gt; Nashed</strong>
+
+72) Lulu: LoR Edition - Town Protective
+
+Every night target another player to <strong>grow</strong> them.
+<strong>Growth</strong>: The defense is risen by one for one phase only.
+
+none -&gt; basic
+basic -&gt; powerful
+powerful -&gt; invincible
+
+Message if attacked but saved by growth:
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">You were attacked, but someone granted you growth and saved you.</code>
+
+<strong>Level Up</strong>: After having <strong>grown</strong> 3 different targets, or prevented death with one of your growths you level up, granting you a new ability in addition to your <strong>grow</strong> ability.
+
+<strong>Help, Pix!</strong>: Every day, target another player. This can have two effects, choose one.
+
+                         - <strong>Help, Pix! Barrier!</strong>: Completely immune to one powerful or basic attack (higher value will be taken) during the next phase.
+                         - <strong>Help, Pix! Vulnerable!</strong>: Decrease another players defense by one and block protectives from increasing/granting defense on the target for the following phase.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974667248583204874 class=chatlog__message-container data-message-id=974667248583204874><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-974667248583204874>05/13/2022 9:39 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Virtue</strong>
+
+75) Werebat - Coven Head
+
+Echolocation: The Coven will passively receive the names of all roles that visit any member of the Coven at night at the end of every night. They will not know who the roles belong to, or which Coven member was visited by each individual role.
+
+- Echolocation counts as a passive and cannot be role blocked by common role blocking actions.
+
+Necronomicon 1:
+
+You gain basic defense.
+You gain Detection immunity
+You gain redirecion immunity.
+
+Spot on: You may choose one of the roles that visited the Coven and were detected by Echolocation every night. You will visit the player with that role and deal a basic attack to them.
+
+You may additionally, as a day action decide to pass on the Necronomicon to the next Coven member in line to receive it.
+The next Coven member will receive the Necronomicon at the start of the following phase.
+You will be placed at the end of the Necronomicon-Receive order, essentially receiving it again if you are the last Coven alive.
+
+If you do this then you lose Spot On and Redirection Immunity.
+
+Necronomicon 2:
+
+You gain redirection immunity.
+
+Echolocation is upgraded and will now detect both the role and the name of the player with that role.
+You will now also know who the target of each player picked up by Echolocation is, starting the phase Echolocation is upgraded.
+
+Skull shattering scream: You may decide to attack another player with a powerful attack every night. This is no longer bound to players spotted by Echolocation.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974685699804626979 class=chatlog__message-container data-message-id=974685699804626979><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-974685699804626979>05/13/2022 10:52 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Ile -&gt; Fire</strong>
+
+298) The Hidden - Neutral Killing
+
+You are stalking in the shadows, waiting for your pray, striking when they least expect it, making them vanish, never to be seen again.
+<s>this is so edgy lmao</s>
+
+<strong>Actions</strong>
+
+<strong>Strike</strong> - You strike your pray when it least expects it, if they are not protected and have no defense, then you will make them vanish.
+
+<strong>Lurk</strong> - You lurk in the shadows trailing your pray. This visit has no immediate effect, until during the following night, where if you <strong>Strike</strong> the same target you lurked they cannot be protected from your strike by other players.
+
+<strong>Into the Shadows</strong> -  You may go back to where you came from, out of the eyes of everyone, you will be missing during the following day and night phase. You will be announced as missing the following day, and as reappearing the day after.
+
+<strong>Passives</strong>
+
+<strong>Invisible</strong> - You cannot be seen visiting and players attempting to target you with abilities inflicting basic attacks will have their action fail and be informed you were missing.
+
+<strong>Vanished</strong> - Anyone you successfully kill will be announced as missing at the start of the following phase, instead of being flipped in the graveyard and only you will learn their role.
+
+<strong>Death Notes</strong> - Upon your own death the roles of all who you eliminated will be revealed and added in the graveyard as kills all performed during the phase you died. They count as deaths of that phase. On death abilities will still trigger when they are killed by you and go missing, on graveyard flip abilities will be delayed through this.</span></div></div></div></div><div id=chatlog__message-container-974685781350314014 class=chatlog__message-container data-message-id=974685781350314014><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="05/13/2022 10:53 AM">10:53</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>- - - - - -
+
+<strong>Droid</strong>
+
+73) Ashling - Coven Evil
+
+<strong>Dark Invitation</strong>: Every night target another player, this can be a member of the Coven. They will be seen as a role of your choice to all investigative roles and receive basic defense.
+
+<strong>Necronomicon</strong>:
+
+If you have the Necronomicon then as a day action may you mark a player with <strong>Dark Aura</strong> and you may visit yourself using <strong>Dark Invitation</strong> now.
+
+<strong>Dark Aura</strong> will cause the afflicted player to be dealt a basic attack if they are visited or perform a visit themselves during the night. Dark Aura will permanently affect the target, even after you have died, but fade after triggering once.
+You may now also visit a player during the night instead of performing <strong>Dark Invitation</strong>, this visit has no effect but will trigger <strong>Dark Aura</strong>&#39;s effect.
+
+You gain detection immunity.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-974687911872180264 class=chatlog__message-container data-message-id=974687911872180264><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-974687911872180264>05/13/2022 11:01 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Shroud</strong>
+
+77) King - Town Power
+
+<strong>Royal Decree</strong>: Each night, pick any player. That player becomes a triple voter for the following day only. You can pick each player only once, and never yourself. If the person already had multiple votes, set it to exactly three and make all of them public votes. The triple vote is handled like a mayor would vote.
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">You have been declared a triple voter for the following day.</code>
+
+<strong>Royal Guard</strong>: If this role rolls, also roll a random Town Protective role and inform all Town Protective roles that there is a 77) King in the game at game start.
+
+<strong>Hour of mourning</strong>: If killed, reveal the names and roles of yourself and all living town protectives to all evil factions in the game, even if you died unrevealed.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-975061390693896232 class=chatlog__message-container data-message-id=975061390693896232><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-975061390693896232>05/14/2022 11:45 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="Melancholic#3527">@Mel</span> <span class="chatlog__markdown-mention" title="EqsyLootz#2051">@EqsyLootz</span> can one of you two synch perms, I cant.</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 19 message(s)</div></div>

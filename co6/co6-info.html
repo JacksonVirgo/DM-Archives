@@ -1,0 +1,690 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - co6-info</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_295d0e767e69da88045ada76f88d9631.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>Temp Archives 6 / co6-info</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1049641198459031644 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1049641198459031644><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1049641198459031644>12/06/2022 5:59 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Times</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-yaml">Day:       48
+Night:     24
+Evil Chat: 24/7</code>
+<strong>Voting</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-yaml">Plurality: Enabled
+Majority:  Enabled (Starting Day 2)
+No Lynch:  Enabled (Starting Day 2)
+Ties:      RNG
+No Votes:  RNG</code>
+<strong>Feedback and Flips</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-yaml">No Feedback:   &quot;You Slept Peacefully.&quot;
+Feedback Type: Rich (ToS)
+Flips:         Roles Flip.
+Kill Credit:   Killer Alignment, not Role.</code>
+<strong>Prods</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-yaml">Minimum:         20
+Host Discretion: Down to 15 (Absolute bare minimum, if your posts were big wallposts for example)
+Warnings:        2
+Third prod:      -&gt; You are out.</code>
+<strong>Replacements</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-yaml">First  Replacement of slot: Replacement will be added if any are found.
+Second Replacement of slot: Modkill.</code>
+<strong>Day Start</strong> - Always at <span class="chatlog__markdown-timestamp" title="Tuesday, December 6, 2022 1:00 PM">1:00 PM</span></span> <span class=chatlog__edited-timestamp title="12/06/2022 7:36 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-1049641674084724736 class=chatlog__message-container data-message-id=1049641674084724736><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/06/2022 6:01 AM">06:01</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> More information later.</span></div></div></div></div><div id=chatlog__message-container-1049642188247674930 class=chatlog__message-container data-message-id=1049642188247674930><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/06/2022 6:03 AM">06:03</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Roles are all finished.
+I will wait for Dan to give the okay, possibly make minor iterations.
+Once everything is ready the game will either start later today, or tomorrow.
+
+We might change the set SoD time.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1049648904473427988 class=chatlog__message-container data-message-id=1049648904473427988><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1049648904473427988>12/06/2022 6:30 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+I forgot to mention it this time around, sorry about that.
+
+Please do not talk about your choices, how many you submitted, or anything else regarding them until the game starts.
+
+And only talk about them inside channels we provide you with for the game!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1049664877477765220 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1049664877477765220><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1049664877477765220>12/06/2022 7:33 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> Everything is ready.
+
+<strong><u>- - - Game Rules - - -</u></strong>
+
+#1 Do not post rolecards, copy paste abilities or win conditions.
+-&gt; You can claim your role name, and your alignment, and you may try to explain what your abilities do in your own words.
+
+#2 Do not claim your secondary or third option which we did not choose to make a role out of. 
+
+#3 Do not copy paste feedback. You may try to explain what it says, does or how it works, but you cannot copy paste or directly quote it etc.
+
+#4 Do not claim your flavour.
+
+#5 If you have a private chat, then these rules apply for those private chats as well.
+-&gt; EXCEPT we specifically tell you that these rules can be ignored in said chat.
+
+Thank you for your understanding.
+Breaking any of these rules will result in a modkill. <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="Smilebuki"
+    title="Smilebuki"
+    src="https://cdn.discordapp.com/emojis/666111439265726465.png"> 
+You have been warned. If you didn&#39;t read this, that&#39;s your own fault.</span> <span class=chatlog__edited-timestamp title="12/06/2022 9:34 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-1049666034124214354 class=chatlog__message-container data-message-id=1049666034124214354><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/06/2022 7:38 AM">07:38</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> Next one.
+
+We have decided to move the <strong>set</strong> day start time up by two hours to <span class="chatlog__markdown-timestamp" title="Tuesday, December 6, 2022 1:00 PM">1:00 PM</span>.
+-&gt; Even if you hammer, night will simply see an extension to end at that time every time.
+
+<strong>Roles will be given out <span class="chatlog__markdown-timestamp" title="Tuesday, December 6, 2022 9:00 AM">12/06/2022 9:00 AM</span></strong>
+-&gt; If you have a private chat, you may already join it and talk in it.</span> <span class=chatlog__edited-timestamp title="12/06/2022 7:45 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-1049666336743243786 class=chatlog__message-container data-message-id=1049666336743243786><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/06/2022 7:39 AM">07:39</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Also, the extra day chats were just trolling, kekw</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1049666401364889640 class=chatlog__message-container data-message-id=1049666401364889640><div class=chatlog__message><div class=chatlog__message-aside><svg class=chatlog__system-notification-icon><use href=#thread-icon></use></svg></div><div class=chatlog__message-primary><span class=chatlog__system-notification-author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span> </span> <span class=chatlog__system-notification-content> <span>started a thread.</span> </span> <span class=chatlog__system-notification-timestamp> <a href=#chatlog__message-container-1049666401364889640>12/06/2022 7:39 AM</a> </span></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1049666744618336266 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1049666744618336266><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1049666744618336266>12/06/2022 7:40 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Graveyard</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-diff">Summary
+
+D1
+- Yeehaw - Goat Horn - Hacker - Voted Out
+N1
++ Bob - Poisonous Potato - Player - Killed by a Hacker
+D2
+- MIH - Llama - Griefer - Voted Out
+- Rune - Snowball - Evil Glitch - Modkilled
++ Lemi - Pigman - Player - Modkilled
+N2
++ Lily - Nether Portal - Player - Killed by a Hacker
++ Kon - Minimap - Player - Killed by a Hacker
+- Atoms - Villager - Griefer - Killed by a Hacker
++ Gappy - Wandering Trader - Player - Killed by a Player
+D3
+- How - Creeper - Griefer - Modkilled
++ Shoob - Ender Dragon - Player - Modkilled
++ Cheetah - Allay - Player - Modkilled
++ Eqsy - Snow Golem - Player - Killed by a Glitch
++ Shroud - Nausea - Player - Voted Out
+N3
++ Mel - Brick - Player - Killed by a Hacker
++ Dec - Enderman - Player - Killed by a Hacker
+- Hx - Dripstone Block - Hacker - Killed by a Glitch
+- Kirin - Enderman - Griefer - Killed by a Player
+- Evon - Jeb_ - Hacker Traitor - Killed by a Hacker
+D4
+- Dota - No More Breeding - Evil Glitch - Voted Out
+N4
++ Phone - Splash Potion of Harming - Player - Killed by a Glitch
+- Dum - TNT - Griefer Traitor - Modkilled
+D5
++ Bionic - Hoglin - Player - Modkilled
+- Ironfire - Hack Client Enjoyer - Killing Glitch - Modkilled
++ Algebra - Potato - Player - Voted out
+N5
++ Paint - Godrod - Player - Killed by a Hacker
++ Dart - Conduit Power - Killed by a Glitch
+D6
+?
+N6
+?</code></span> <span class=chatlog__edited-timestamp title="12/22/2022 4:25 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-1049667337470619699 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1049667337470619699><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/06/2022 7:43 AM">07:43</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Playerlist</strong>
+
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Melancholic#3527">@Mel</span> (<strong>Brick - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="UltimateBob2.0#9084">@UltimateBob2.0</span> (<strong>Poisonous Potato - Player</strong>) 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="very sad yeehaw#0330">@very sad yeehaw</span> (<strong>Goat Horn - Hacker</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Rune#4441">@Rune</span> (<strong>Snowball - Evil Glitch</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Bionic#2070">@Bionic</span> (<strong>Hoglin - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Daichen#5727">@Syse</span> (<strong>Enderman - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Phone0Ix#3600">@Caitlin</span> (<strong>Splash Potion of Harming - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="LilyBottom &#127802;#9414">@LilyBottom &#127802;</span> (<strong>Nether Portal - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="≠KonKon, the Fairydragon≠#8089">@Kon... i guess?</span> (<strong>Minimap - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Paint#4618">@Paint</span> (<strong>Godrod - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="how#5838">@how paradox</span> (<strong>Creeper - Griefer</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="hx25#9475">@hx25</span> (<strong>Dripstone Block - Hacker</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="MIH#7775">@MIH</span> (<strong>Llama - Griefer</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="EqsyLootz#2051">@EqsyLootz</span> (<strong>Snow Golem - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="A Bunch Of Atoms Glued Together#7869">@x&#179;</span> (<strong>Villager - Griefer</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Ironfire#5410">@me</span> (<strong>Hack Client Enjoyer - Killing Glitch</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Azi#2320">@Shoob</span> (<strong>Ender Dragon - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <span class="chatlog__markdown-mention" title="Duncan#0078">@Marisa Kirisame</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Dartrevas#1702">@Dartrevas</span> (<strong>Conduit Power - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="kirin yang#0422">@kirin yang</span> (<strong>Enderman - Griefer</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <span class="chatlog__markdown-mention" title="SpaceZeri#7668">@SpaceZeri</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="evon.#1337">@evon.</span> (<strong>Jeb_ - Hacker Traitor</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Gappy_Zero#9312">@Gappy</span> (<strong>Wandering Trader - Player</strong>) 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Algebra#2356">@Algebra</span> (<strong>Potato - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="Dum#5256">@Dum</span> (<strong>TNT</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="&#127819;Lemi&#127819;#6566">@(Lemi) &#127819;I like Lemons</span> (<strong>Pigman - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <s><span class="chatlog__markdown-mention" title="shroomy#8157">@shrooms</span></s> <span class="chatlog__markdown-mention" title="ScarletShroud#1553">@ScarletShroud</span> (<strong>Nausea - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="QueenOfCheetahs#4819">@QueenOfCheetahs, Master of Ender</span> (<strong>Allay - Player</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="dota#1423">@dota</span> (<strong>No More Breeding - Evil Glitch</strong>)
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <s><span class="chatlog__markdown-mention" title="Mobile Task Force#0228">@&#128296; 쥐고 있는 사람 &#128205;</span></s> <span class="chatlog__markdown-mention" title="Taco!#6969">@Taco!</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <s><span class="chatlog__markdown-mention" title="derpsnorlax#3114">@derpsnorlax</span></s> <span class="chatlog__markdown-mention" title="ʍǟֆᏦɛɖ ɛք#6316">@ʍǟֆᏦɛɖ ɛք</span></span> <span class=chatlog__edited-timestamp title="12/22/2022 4:25 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-1049668200431886366 class=chatlog__message-container data-message-id=1049668200431886366><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/06/2022 7:46 AM">07:46</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> Remember when I announced day start? I fucking lied.
+
+Day start is tomorrow <span class="chatlog__markdown-timestamp" title="Wednesday, December 7, 2022 1:00 PM">1:00 PM</span>, <span class="chatlog__markdown-timestamp" title="Wednesday, December 7, 2022 1:00 PM">12/07/2022 1:00 PM</span>
+
+<strong>This might change to <span class="chatlog__markdown-timestamp" title="Tuesday, December 6, 2022 1:00 PM">12/06/2022 1:00 PM</span></strong> but I highly doubt it.
+
+After we send you your rolecards, you have until the start of the game to confirm you saw and understood your role and to join your private chats if you have any.
+Failure to do so will result in a force replace (or modkill if no replacement is found)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1049695190094450729 class=chatlog__message-container data-message-id=1049695190094450729><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1049695190094450729>12/06/2022 9:33 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+All roles have been given out.
+
+As you might have noticed, flavour GIFs were added to your roles. Do not post them. Do not claim them.
+Thank you.
+(Only moderators can post them, but I say this just in case.)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1049695433712222208 class=chatlog__message-container data-message-id=1049695433712222208><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(186,85,211) title=Lunex#0727>Lunexia on Osu!</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1049664877477765220')"> <span class="chatlog__markdown-mention" style="">@Alive Line CO</span> Everything is ready.
+
+<strong><u>- - - Game Rules - - -</u></strong>
+
+#1 Do not post rolecards, copy paste abilities or win conditions.
+-&gt; You can claim your role name, and your alignment, and you may try to explain what your abilities do in your own words.
+
+#2 Do not claim your secondary or third option which we did not choose to make a role out of. 
+
+#3 Do not copy paste feedback. You may try to explain what it says, does or how it works, but you cannot copy paste or directly quote it etc.
+
+#4 Do not claim your flavour.
+
+#5 If you have a private chat, then these rules apply for those private chats as well.
+-&gt; EXCEPT we specifically tell you that these rules can be ignored in said chat.
+
+Thank you for your understanding.
+Breaking any of these rules will result in a modkill. <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="Smilebuki"
+    title="Smilebuki"
+    src="https://cdn.discordapp.com/emojis/666111439265726465.png"> 
+You have been warned. If you didn&#39;t read this, that&#39;s your own fault. </span> <span class=chatlog__reply-edited-timestamp title="12/06/2022 9:34 AM">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1049695433712222208>12/06/2022 9:34 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The roles have therefor seen the addition of
+
+#4 Do not claim your flavour.
+-&gt; This includes both the flavour text above your role&#39;s abilities as well as the flavour GIF.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1050025694714933298 class=chatlog__message-container data-message-id=1050025694714933298><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1050025694714933298>12/07/2022 7:27 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> Everyone confirmed their role!
+
+Day start <span class="chatlog__markdown-timestamp" title="Wednesday, December 7, 2022 1:00 PM">1:00 PM</span>, <span class="chatlog__markdown-timestamp" title="Wednesday, December 7, 2022 1:00 PM">12/07/2022 1:00 PM</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1050028933103484988 class=chatlog__message-container data-message-id=1050028933103484988><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1050028933103484988>12/07/2022 7:40 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+The <strong>Town</strong> will be represented by the <strong>Players</strong> this time around.
+Furthermore, the evils, even with different alignment, may in some cases be able to win with each other.
+-&gt; Evils will be told more than this.
+Figure it out. <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="👍"
+    title="thumbsup"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"> 
+
+Example <strong>PLAYER</strong> (Town) rolecard
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+<strong>Citizen</strong> - Player
+
+<em>Flavour text, its so cool fr fr, citizen best role</em>
+
+<strong>Cool Ability Name</strong>: Ability description
+
+<strong>Potential Second Ability Name</strong>: Ability description
+
+<strong>These might be passives sometimes too</strong>: Ability description
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Additionally, if you would like to receive the reward for joining this game, specifically paid out for the minecraft server, you can do so soon.
+I will announce what that is then.</span> <span class=chatlog__edited-timestamp title="12/07/2022 1:04 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1050109471503953920 class=chatlog__message-container data-message-id=1050109471503953920><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1050109471503953920>12/07/2022 1:00 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<strong><u>- - - Day 1 Start - - -</u></strong>
+
+EoD: <span class="chatlog__markdown-timestamp" title="Friday, December 9, 2022 1:00 PM">12/09/2022 1:00 PM</span>
+- Majority is disabled today.
+- No lynch is disabled today.</span></div></div></div></div><div id=chatlog__message-container-1050110301913239625 class=chatlog__message-container data-message-id=1050110301913239625><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/07/2022 1:03 PM">13:03</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+Hello.
+I will announce the reward that you can redeem on the server at 24 hours into the day (alongside prods).
+Additionally I would like to make you all aware that I will prod 24 hours into the day and then again at EoD. <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="👍"
+    title="thumbsup"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"></span> <span class=chatlog__edited-timestamp title="12/07/2022 1:03 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-1050111154988535930 class=chatlog__message-container data-message-id=1050111154988535930><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/07/2022 1:06 PM">13:06</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+When performing day actions, please ping me and dan. Thanks.
+Additionally, you may change your day action until EoD unless they are meant to resolve instantly.</span> <span class=chatlog__edited-timestamp title="12/07/2022 1:07 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1050480158697594930 class=chatlog__message-container data-message-id=1050480158697594930><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1050480158697594930>12/08/2022 1:33 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="≠KonKon, the Fairydragon≠#8089">@Kon... i guess?</span> 1/3 (9/20 messages)
+<span class="chatlog__markdown-mention" title="how#5838">@how paradox</span> 1/3 (14/20 messages)
+<span class="chatlog__markdown-mention" title="QueenOfCheetahs#4819">@QueenOfCheetahs, Master of Ender</span> 1/3 (0/20 messages)
+<span class="chatlog__markdown-mention" title="kirin yang#0422">@kirin yang</span> 1/3 (12/20 messages)
+<span class="chatlog__markdown-mention" title="Mobile Task Force#0228">@&#128296; 쥐고 있는 사람 &#128205;</span>  1/3 (2/20 messages)
+
+You 5 have been prodded. Do better.</span></div></div></div></div><div id=chatlog__message-container-1050480713629192302 class=chatlog__message-container data-message-id=1050480713629192302><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/08/2022 1:35 PM">13:35</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<strong>You can now redeem the goodie on the server!</strong>
+
+Everyone who joined the game  is now eligible to ping me when online on our Minecraft SMP server to receive <strong>A Netherite Ingot</strong>!
+Possibly more to come <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="👀"
+    title="eyes"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f440.svg"> 
+
+-&gt; If you didn&#39;t know, this game runs to celebrate our MC server! You can find details on how to participate in <span class="chatlog__markdown-mention">#&#129521;┊minecraft-general</span> (Check out the threads in that channel for the IP and a guide on how to set up a fabric client)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1050815052950814800 class=chatlog__message-container data-message-id=1050815052950814800><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1050815052950814800>12/09/2022 11:43 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> I am a bit of an idiot and this info should&#39;ve been public <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🙄"
+    title="rolling_eyes"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f644.svg"> 
+
+Factional Scum has a factional kill they can use instead of their night action (if they have any), unless mentioned otherwise to the factional scum, of course!</span></div></div></div></div><div id=chatlog__message-container-1050815221951897651 class=chatlog__message-container data-message-id=1050815221951897651><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/09/2022 11:44 AM">11:44</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Also, EoD in 1 hour and 16 minutes, but I MIGHT be eating at that time.</span></div></div></div></div><div id=chatlog__message-container-1050815281448112128 class=chatlog__message-container data-message-id=1050815281448112128><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/09/2022 11:44 AM">11:44</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Remember, there will be prods at EoD <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="👍"
+    title="thumbsup"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1050836845006692422 class=chatlog__message-container data-message-id=1050836845006692422><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1050836845006692422>12/09/2022 1:10 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+The day has ended. I will now first send out any potential day feedback, I will then announce the lynch and any other announcements that there may be.
+Please don&#39;t send me any night actions yet, as your action might change depending on potential day feedback!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1050841361361936514 class=chatlog__message-container data-message-id=1050841361361936514><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1050841361361936514>12/09/2022 1:28 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+All day actions processed. If you did not receive anything then that&#39;s how it is.
+
+<strong><u>- - - Announcement - - -</u></strong>
+
+- None
+
+<strong><u>- - - Day 1 Ends - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="very sad yeehaw#0330">@very sad yeehaw</span> has been voted out.
+They were <strong>Goat Horn - Hacker</strong>
+-&gt; You can find all rolecards in <span class="chatlog__markdown-mention">#deleted-channel</span>!
+
+<strong><u>- - - Night 1 Starts - - -</u></strong>
+
+EoN: <span class="chatlog__markdown-timestamp" title="Saturday, December 10, 2022 1:00 PM">12/10/2022 1:00 PM</span>
+End of Submission: <span class="chatlog__markdown-timestamp" title="Saturday, December 10, 2022 11:00 AM">12/10/2022 11:00 AM</span>
+You may submit actions now.</span> <span class=chatlog__edited-timestamp title="12/09/2022 1:59 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-1050841997805633626 class=chatlog__message-container data-message-id=1050841997805633626><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/09/2022 1:30 PM">13:30</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The graveyard, alive list, etc have been updated.</span></div></div></div></div><div id=chatlog__message-container-1050842114432434197 class=chatlog__message-container data-message-id=1050842114432434197><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/09/2022 1:31 PM">13:31</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ScarletShroud#1553">@ScarletShroud</span> is replacing <span class="chatlog__markdown-mention" title="shroomy#8157">@shrooms</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1051137219584331786 class=chatlog__message-container data-message-id=1051137219584331786><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1051137219584331786>12/10/2022 9:04 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<span class="chatlog__markdown-mention" title="Daichen#5727">@Syse</span> 1/3 (7/20 messages)
+<span class="chatlog__markdown-mention" title="Gappy_Zero#9312">@Gappy</span> 1/3 (4/20 messages)
+<span class="chatlog__markdown-mention" title="Dartrevas#1702">@Dartrevas</span> 1/3 (1/20 messages)
+<span class="chatlog__markdown-mention" title="UltimateBob2.0#9084">@UltimateBob2.0</span> 1/3 (6/20 messages)
+<span class="chatlog__markdown-mention" title="Melancholic#3527">@Mel</span> 1/3 (2/20 messages)
+<span class="chatlog__markdown-mention" title="&#127819;Lemi&#127819;#6566">@(Lemi) &#127819;I like Lemons</span> 1/3 (7/20 messages)
+<span class="chatlog__markdown-mention" title="Algebra#2356">@Algebra</span> 1/3 (2/20 messages)
+<span class="chatlog__markdown-mention" title="Mobile Task Force#0228">@&#128296; 쥐고 있는 사람 &#128205;</span> 2/3 (0/20 messages)
+
+Prods.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1051196455735529532 class=chatlog__message-container data-message-id=1051196455735529532><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1051196455735529532>12/10/2022 12:59 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<strong><u>- - - System - - -</u></strong>
+
+-&gt; Majority is now enabled.
+-&gt; No-Lynch is now enabled.
+
+<strong><u>- - - Announcement - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="Bionic#2070">@Bionic</span> visited <span class="chatlog__markdown-mention" title="Dum#5256">@Dum</span> last night.
+
+<strong><u>- - - Night 1 Ends - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="UltimateBob2.0#9084">@UltimateBob2.0</span> died last night.
+They were killed by a Hacker.
+Their role was <strong>Poisonous Potato - Player</strong>
+-&gt; You can find the rolecard in <span class="chatlog__markdown-mention">#deleted-channel</span> soon.
+
+<strong><u>- - - Day 2 Starts - - -</u></strong>
+
+EoD: <span class="chatlog__markdown-timestamp" title="Monday, December 12, 2022 1:00 PM">12/12/2022 1:00 PM</span>
+Day Action Submission Deadline: <span class="chatlog__markdown-timestamp" title="Monday, December 12, 2022 11:00 AM">12/12/2022 11:00 AM</span></span></div></div></div></div><div id=chatlog__message-container-1051197185250836480 class=chatlog__message-container data-message-id=1051197185250836480><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/10/2022 1:02 PM">13:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention">#deleted-channel</span> now has the latest rolecards.
+Alive list and graveyard summary updated (check pins)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1051589024608952400 class=chatlog__message-container data-message-id=1051589024608952400><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1051589024608952400>12/11/2022 2:59 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<span class="chatlog__markdown-mention" title="ScarletShroud#1553">@ScarletShroud</span> 1/3 (9/20)
+
+GOOD JOB ON THE ACTIVITY GUYS, KEEP IT UP!!!!!</span></div></div></div></div><div id=chatlog__message-container-1051589197321994300 class=chatlog__message-container data-message-id=1051589197321994300><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/11/2022 3:00 PM">15:00</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Next prod is at EoD!!!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1051809751790530580 class=chatlog__message-container data-message-id=1051809751790530580><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1051809751790530580>12/12/2022 5:36 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+Both Rune and Lemi replaced out, if no replacements are found then I will modkill both slots at EoD</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1051932527641759924 class=chatlog__message-container data-message-id=1051932527641759924><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1051932527641759924>12/12/2022 1:44 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<strong><u>- - - System - - -</u></strong>
+
+Due to a lack of replacements, <span class="chatlog__markdown-mention" title="Rune#4441">@Rune</span> (Rune) and <span class="chatlog__markdown-mention" title="&#127819;Lemi&#127819;#6566">@(Lemi) &#127819;I like Lemons</span> will be modkilled.
+
+<strong><u>- - - Announcements - - -</u></strong>
+
+- None
+
+<strong><u>- - - Day 2 Ends - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="MIH#7775">@MIH</span> has been voted out.
+They were <strong>Llama - Griefer</strong>
+
+- <span class="chatlog__markdown-mention" title="Rune#4441">@Rune</span> (rune) has been modkilled.
+They were <strong>Snowball - Evil Glitch</strong>
+
+- <span class="chatlog__markdown-mention" title="&#127819;Lemi&#127819;#6566">@(Lemi) &#127819;I like Lemons</span> has been modkilled.
+They were <strong>Pigman - Player</strong>
+
+-&gt; I will post their rolecards in <span class="chatlog__markdown-mention">#deleted-channel</span> asap (but first I go get food, I will ping once they are there) and update all the other stuff.
+
+<strong><u>- - - Night 2 Starts - - -</u></strong>
+
+EoN: <span class="chatlog__markdown-timestamp" title="Tuesday, December 13, 2022 1:00 PM">12/13/2022 1:00 PM</span>
+EoS: (End of Submission) <span class="chatlog__markdown-timestamp" title="Tuesday, December 13, 2022 11:00 AM">12/13/2022 11:00 AM</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1052279563499085894 class=chatlog__message-container data-message-id=1052279563499085894><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1052279563499085894>12/13/2022 12:43 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> also, nobody was prodded, good job my children
+
+<span class="chatlog__markdown-mention" title="ScarletShroud#1553">@ScarletShroud</span> has to be more active though, I will prod u next time.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1052283532648656916 class=chatlog__message-container data-message-id=1052283532648656916><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1052283532648656916>12/13/2022 12:59 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<strong><u>- - - Announcements - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="≠KonKon, the Fairydragon≠#8089">@Kon... i guess?</span> reveals his logs!
+<strong>Night 1 Log: Visit - Duncan | Visits tracked on yourself and your target: Algebra, MIH, Cheetah</strong>
+
+- <span class="chatlog__markdown-mention" title="Bionic#2070">@Bionic</span> feels sick and cannot vote today. Majority will be adjusted accordingly
+
+<strong><u>- - - Night 2 Ends - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="LilyBottom &#127802;#9414">@LilyBottom &#127802;</span> died last night.
+They were killed by a Hacker.
+Their role was <strong>Nether Portal - Player</strong>
+
+- <span class="chatlog__markdown-mention" title="≠KonKon, the Fairydragon≠#8089">@Kon... i guess?</span> died last night.
+They were killed by a Hacker.
+Their role was <strong>Minimap - Player</strong>
+
+- <span class="chatlog__markdown-mention" title="A Bunch Of Atoms Glued Together#7869">@x&#179;</span> died last night.
+They were killed by a Hacker.
+Their role was <strong>Villager - Griefer</strong>
+They were adapting to the <strong>Creeper</strong> during their phase of death.
+
+- <span class="chatlog__markdown-mention" title="Gappy_Zero#9312">@Gappy</span> died last night.
+They were killed by a Player.
+Their role was <strong>Wandering Trader - Player</strong>
+
+-&gt; You can find the rolecards in <span class="chatlog__markdown-mention">#deleted-channel</span> soon.
+
+<strong><u>- - - Day 3 Starts - - -</u></strong>
+
+EoD: <span class="chatlog__markdown-timestamp" title="Thursday, December 15, 2022 1:00 PM">12/15/2022 1:00 PM</span>
+EoS: <span class="chatlog__markdown-timestamp" title="Thursday, December 15, 2022 11:00 AM">12/15/2022 11:00 AM</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1052655826327830638 class=chatlog__message-container data-message-id=1052655826327830638><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1052655826327830638>12/14/2022 1:38 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="Daichen#5727">@Syse</span> 2/3 (17/20 messags)
+<span class="chatlog__markdown-mention" title="how#5838">@how paradox</span> 2/3 (15/20 messages)
+<span class="chatlog__markdown-mention" title="Ironfire#5410">@me</span> 1/3 (0/20 messages)
+<span class="chatlog__markdown-mention" title="QueenOfCheetahs#4819">@QueenOfCheetahs, Master of Ender</span> 2/3 (1/20 messages)
+<span class="chatlog__markdown-mention" title="derpsnorlax#3114">@derpsnorlax</span> 1/3 (2/20 messages)
+<span class="chatlog__markdown-mention" title="Azi#2320">@Shoob</span> 1/3 (5/20 messages)
+<span class="chatlog__markdown-mention" title="Algebra#2356">@Algebra</span> 2/3 (11/20 messages)
+<span class="chatlog__markdown-mention" title="EqsyLootz#2051">@EqsyLootz</span> 1/3 (3/20 messages)
+
+<span class="chatlog__markdown-mention" style="">@Alive Line CO</span> real prods (real)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1052935789048238101 class=chatlog__message-container data-message-id=1052935789048238101><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1052935789048238101>12/15/2022 8:10 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> end of day action submission is in 3 hours, end of day in 5.
+Remember that there will be prods <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="MafiaCat"
+    title="MafiaCat"
+    src="https://cdn.discordapp.com/emojis/982324637360873552.png"></span> <span class=chatlog__edited-timestamp title="12/15/2022 8:10 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1052985339230289940 class=chatlog__message-container data-message-id=1052985339230289940><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1052985339230289940>12/15/2022 11:27 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day action deadline met.
+
+EoD in 1 hour 30 minutes <span class="chatlog__markdown-mention" style="">@Alive Line CO</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1053008849617027164 class=chatlog__message-container data-message-id=1053008849617027164><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1053008849617027164>12/15/2022 1:01 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> hello. I will now resolve day actions, if there were any and will then go over to do EoD.</span></div></div></div></div><div id=chatlog__message-container-1053008891459412050 class=chatlog__message-container data-message-id=1053008891459412050><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/15/2022 1:01 PM">13:01</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Wait with your action submission until then in case things change.</span></div></div></div></div><div id=chatlog__message-container-1053010421327613992 class=chatlog__message-container data-message-id=1053010421327613992><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/15/2022 1:07 PM">13:07</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>I will do prods first</span></div></div></div></div><div id=chatlog__message-container-1053011459988271174 class=chatlog__message-container data-message-id=1053011459988271174><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/15/2022 1:11 PM">13:11</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="Dum#5256">@Dum</span> 1/3 (0/20 messages)
+<span class="chatlog__markdown-mention" title="QueenOfCheetahs#4819">@QueenOfCheetahs, Master of Ender</span> 3/3 (0/20 messages) - Modkill
+<span class="chatlog__markdown-mention" title="derpsnorlax#3114">@derpsnorlax</span> 2/3 (4/20 messages)
+<span class="chatlog__markdown-mention" title="evon.#1337">@evon.</span> 1/3 (2/20 messages)</span></div></div></div></div><div id=chatlog__message-container-1053013155808301096 class=chatlog__message-container data-message-id=1053013155808301096><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/15/2022 1:18 PM">13:18</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<strong><u>- - - System - - -</u></strong>
+
+<span class="chatlog__markdown-mention" title="how#5838">@how paradox</span> has replaced out and will be modkilled.
+<span class="chatlog__markdown-mention" title="Azi#2320">@Shoob</span> has replaced out and will be modkilled.
+<span class="chatlog__markdown-mention" title="QueenOfCheetahs#4819">@QueenOfCheetahs, Master of Ender</span> will be force replaced for inactivity and will be modkilled.
+
+<strong><u>- - - Announcement - - -</u></strong>
+
+<span class="chatlog__markdown-mention" title="EqsyLootz#2051">@EqsyLootz</span> died at the end of the day.
+
+<strong><u>- - - Day 3 Ends - - -</u></strong>
+
+I will start with the modkilled players, then the day killed and then the lynched.
+
+- <span class="chatlog__markdown-mention" title="how#5838">@how paradox</span> has been modkilled.
+They were <strong>Creeper - Griefer</strong>
+
+- <span class="chatlog__markdown-mention" title="Azi#2320">@Shoob</span> has been modkilled.
+They were <strong>Ender Dragon - Player</strong>
+
+- <span class="chatlog__markdown-mention" title="QueenOfCheetahs#4819">@QueenOfCheetahs, Master of Ender</span> has been modkilled.
+They were <strong>Allay - Player</strong>
+
+- <span class="chatlog__markdown-mention" title="EqsyLootz#2051">@EqsyLootz</span> died today.
+They were killed by a Glitch.
+Their role was <strong>Snow Golem - Player</strong>
+
+- <span class="chatlog__markdown-mention" title="ScarletShroud#1553">@ScarletShroud</span> has been voted out.
+They were <strong>Nausea - Player</strong>
+
+-&gt; <span class="chatlog__markdown-mention">#deleted-channel</span> and other places will be updated shortly.
+
+<strong><u>- - - Night 3 Starts - - -</u></strong>
+
+You may submit night actions now.
+EoN: <span class="chatlog__markdown-timestamp" title="Friday, December 16, 2022 1:00 PM">12/16/2022 1:00 PM</span>
+EoS: <span class="chatlog__markdown-timestamp" title="Friday, December 16, 2022 11:00 AM">12/16/2022 11:00 AM</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1053348726627893348 class=chatlog__message-container data-message-id=1053348726627893348><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1053348726627893348>12/16/2022 11:31 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Action submission locked</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1053370996972859402 class=chatlog__message-container data-message-id=1053370996972859402><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1053370996972859402>12/16/2022 1:00 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<strong><u>- - - Announcement - - -</u></strong>
+
+<strong>None</strong>
+
+<strong><u>- - - Night 3 Ends - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="Melancholic#3527">@Mel</span> died last night.
+They were killed by a Hacker
+Their role was <strong>Brick - Player</strong>
+
+- <span class="chatlog__markdown-mention" title="Daichen#5727">@Syse</span> died last night.
+They were killed by a Hacker.
+Their role was <strong>Enderman - Player</strong>
+
+- <span class="chatlog__markdown-mention" title="hx25#9475">@hx25</span> died last night.
+They were killed by a Glitch.
+Their role was <strong>Dripstone Block - Hacker</strong>
+
+- <span class="chatlog__markdown-mention" title="kirin yang#0422">@kirin yang</span> died last night.
+They were killed by a Player.
+Their role was <strong>Enderman - Griefer</strong>
+
+- <span class="chatlog__markdown-mention" title="evon.#1337">@evon.</span> died last night.
+They were killed by a Hacker.
+Their role was <strong>Jeb_ - Hacker Traitor</strong>
+
+-&gt; <span class="chatlog__markdown-mention">#deleted-channel</span>, the pinned alive list and the pinned graveyard summary will be updated ASAP.
+
+<strong><u>- - - Day 4 Starts - - -</u></strong>
+
+Eod: <span class="chatlog__markdown-timestamp" title="Sunday, December 18, 2022 1:00 PM">12/18/2022 1:00 PM</span>
+EoS: <span class="chatlog__markdown-timestamp" title="Sunday, December 18, 2022 11:00 AM">12/18/2022 11:00 AM</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1053372849521442886 class=chatlog__message-container data-message-id=1053372849521442886><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1053372849521442886>12/16/2022 1:07 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<span class="chatlog__markdown-mention">#deleted-channel</span> the graveyard summary and the alive list are now updated!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1053727631725568151 class=chatlog__message-container data-message-id=1053727631725568151><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1053727631725568151>12/17/2022 12:37 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> prods in 30 mins</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1053738413083344906 class=chatlog__message-container data-message-id=1053738413083344906><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1053738413083344906>12/17/2022 1:20 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="Dum#5256">@Dum</span> 2/3 (0/20 messages) That&#39;s no messages twice in a row my guy.
+<span class="chatlog__markdown-mention" title="Duncan#0078">@Marisa Kirisame</span> 1/3 (8/20 messages)
+<span class="chatlog__markdown-mention" title="Bionic#2070">@Bionic</span> 1/3  (8/20 messages)
+
+<span class="chatlog__markdown-mention" title="Algebra#2356">@Algebra</span> you would have been prodded, but i&#39;ll exclude you because I am feeling awfully nice today <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="Weirdge"
+    title="Weirdge"
+    src="https://cdn.discordapp.com/emojis/914600901912719401.png"></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1053995640327262269 class=chatlog__message-container data-message-id=1053995640327262269><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1053995640327262269>12/18/2022 6:22 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> EoD in 6 hours and a bit. Might be delayed as I will be playing a tournament match at that time.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1054116789371551805 class=chatlog__message-container data-message-id=1054116789371551805><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1054116789371551805>12/18/2022 2:23 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> I will now resolve any day feedback that there may be.</span></div></div></div></div><div id=chatlog__message-container-1054117239109980191 class=chatlog__message-container data-message-id=1054117239109980191><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/18/2022 2:25 PM">14:25</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Okay prod time</span></div></div></div></div><div id=chatlog__message-container-1054117348505821204 class=chatlog__message-container data-message-id=1054117348505821204><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/18/2022 2:26 PM">14:26</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Oh sweet jesus</span></div></div></div></div><div id=chatlog__message-container-1054117436410052628 class=chatlog__message-container data-message-id=1054117436410052628><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/18/2022 2:26 PM">14:26</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Why is EVERYONE on there</span></div></div></div></div><div id=chatlog__message-container-1054117439497043978 class=chatlog__message-container data-message-id=1054117439497043978><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/18/2022 2:26 PM">14:26</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji chatlog__emoji--large"
+    alt="💀"
+    title="skull"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f480.svg"></span></div></div></div></div><div id=chatlog__message-container-1054118386902245407 class=chatlog__message-container data-message-id=1054118386902245407><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/18/2022 2:30 PM">14:30</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="Ironfire#5410">@me</span> 2/3 (1/20 messages)
+<span class="chatlog__markdown-mention" title="Dartrevas#1702">@Dartrevas</span> 2/3 (0/20 messages)
+<span class="chatlog__markdown-mention" title="SpaceZeri#7668">@SpaceZeri</span> 1/3 (0/20 messages)
+<span class="chatlog__markdown-mention" title="Paint#4618">@Paint</span> 1/3 (0/20 messages)
+<span class="chatlog__markdown-mention" title="Dum#5256">@Dum</span> 3/3 (6/20 messages) - Force Replace
+<span class="chatlog__markdown-mention" title="derpsnorlax#3114">@derpsnorlax</span> 3/3 (3/20 messages) - Force Replace
+<span class="chatlog__markdown-mention" title="Bionic#2070">@Bionic</span> 2/3 (0/20 messages)
+<span class="chatlog__markdown-mention" title="Mobile Task Force#0228">@&#128296; 쥐고 있는 사람 &#128205;</span> 3/3 (0/20 messages) - Force Replace
+
+<span class="chatlog__markdown-mention" title="Phone0Ix#3600">@Caitlin</span> I will let you prod dodge.</span></div></div></div></div><div id=chatlog__message-container-1054118438039195668 class=chatlog__message-container data-message-id=1054118438039195668><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/18/2022 2:30 PM">14:30</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>I will modkill all force replaced slots at EoN if no replacement is found.</span></div></div></div></div><div id=chatlog__message-container-1054118468225609919 class=chatlog__message-container data-message-id=1054118468225609919><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/18/2022 2:30 PM">14:30</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>I will let you know mid-night should I find one.</span></div></div></div></div><div id=chatlog__message-container-1054119807487856750 class=chatlog__message-container data-message-id=1054119807487856750><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/18/2022 2:35 PM">14:35</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong><u>- - - System - - -</u></strong>
+
+<span class="chatlog__markdown-mention" title="Dum#5256">@Dum</span> has been force replaced.
+<span class="chatlog__markdown-mention" title="derpsnorlax#3114">@derpsnorlax</span> has been force replaced.
+<span class="chatlog__markdown-mention" title="Mobile Task Force#0228">@&#128296; 쥐고 있는 사람 &#128205;</span> has been force replaced.
+
+Everyone with 0 messages, please send me a message telling me you wish to continue playing, otherwise i will modkill your slots tomorrow.
+The same goes for anyone who received their second prod just now.
+
+<strong><u>- - - Announcement - - -</u></strong>
+
+- None
+
+<strong><u>- - - Day 4 Ends - - -</u></strong>
+
+<span class="chatlog__markdown-mention" title="dota#1423">@dota</span> has been voted out.
+They were <strong>No More Breeding - Evil Glitch</strong>
+
+<strong><u>- - - Night 4 Starts - - -</u></strong>
+
+EoN: <span class="chatlog__markdown-timestamp" title="Monday, December 19, 2022 1:00 PM">12/19/2022 1:00 PM</span>
+EoS: <span class="chatlog__markdown-timestamp" title="Monday, December 19, 2022 11:00 AM">12/19/2022 11:00 AM</span>
+
+Note: Start of Day might be delayed due to me being at work tomorrow. If this is the case then actions are still locked in at the given time, with day start being delayed indefinitely until I tell you it happens.</span> <span class=chatlog__edited-timestamp title="12/18/2022 2:36 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1054122795761664000 class=chatlog__message-container data-message-id=1054122795761664000><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1054122795761664000>12/18/2022 2:47 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<span class="chatlog__markdown-mention" title="Taco!#6969">@Taco!</span> replaces <span class="chatlog__markdown-mention" title="Mobile Task Force#0228">@&#128296; 쥐고 있는 사람 &#128205;</span> 
+<span class="chatlog__markdown-mention" title="ʍǟֆᏦɛɖ ɛք#6316">@ʍǟֆᏦɛɖ ɛք</span> replaces <span class="chatlog__markdown-mention" title="derpsnorlax#3114">@derpsnorlax</span></span></div></div></div></div><div id=chatlog__message-container-1054124184046927973 class=chatlog__message-container data-message-id=1054124184046927973><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/18/2022 2:53 PM">14:53</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<span class="chatlog__markdown-mention" title="Reb#0540">@Reb</span> replaces <span class="chatlog__markdown-mention" title="Dum#5256">@Dum</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1054452959737544825 class=chatlog__message-container data-message-id=1054452959737544825><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1054452959737544825>12/19/2022 12:39 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> I just got home. There will be delay.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1054477063899328623 class=chatlog__message-container data-message-id=1054477063899328623><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1054477063899328623>12/19/2022 2:15 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> I am alive again, I will start making night feedback, the day should start sometime within the next 45 minutes</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1054483653754884177 class=chatlog__message-container data-message-id=1054483653754884177><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1054483653754884177>12/19/2022 2:41 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<strong><u>- - - System - - -</u></strong>
+
+-<span class="chatlog__markdown-mention" title="Dum#5256">@Dum</span> will be modkilled (Kat reverted the replace, therefor nobody is in the slot -&gt; Modkill)
+
+<strong><u>- - - Announcements - - -</u></strong>
+
+- None
+
+<strong><u>- - - Night 4 Ends - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="Dum#5256">@Dum</span> has been modkilled.
+They were <strong>TNT - Griefer Traitor</strong>
+
+- <span class="chatlog__markdown-mention" title="Phone0Ix#3600">@Caitlin</span> has died.
+They were killed by a Glitch.
+Their role was <strong>Splash Potion of Harming - Player</strong>
+
+<strong><u>- - - Day 5 Starts - - -</u></strong>
+
+EoD: <span class="chatlog__markdown-timestamp" title="Wednesday, December 21, 2022 1:00 PM">12/21/2022 1:00 PM</span> (Awfully sorry, but I will deduct 2 hours from the day making it 46 hours)
+EoS: <span class="chatlog__markdown-timestamp" title="Wednesday, December 21, 2022 11:00 AM">12/21/2022 11:00 AM</span>
+
+<span class="chatlog__markdown-mention" style="">@Alive Line CO</span> <strong>BE ACTIVE. ALMOST ALL OF YOU ARE ON YOUR LAST PROD.</strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1054725940422393877 class=chatlog__message-container data-message-id=1054725940422393877><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/739519254201761793/b0ed2f4676653a7d497438d72867e356.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(209,11,11) title=Chiibichi#3720 data-user-id=739519254201761793>Chiibichi</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1054725940422393877>12/20/2022 6:44 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> hello dear participants! I am to inform you that prods will be conducted in 6 hours!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1054822733063667752 class=chatlog__message-container data-message-id=1054822733063667752><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1054822733063667752>12/20/2022 1:08 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> PRODS
+
+<span class="chatlog__markdown-mention" title="Taco!#6969">@Taco!</span> please post more, you would have been prodded but I will be nice <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="Smilebuki"
+    title="Smilebuki"
+    src="https://cdn.discordapp.com/emojis/666111439265726465.png"> 
+<span class="chatlog__markdown-mention" title="Algebra#2356">@Algebra</span> you barely escape my clutches <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="peepostare"
+    title="peepostare"
+    src="https://cdn.discordapp.com/emojis/985976319873531955.png"></span></div></div></div></div><div id=chatlog__message-container-1054822749962502316 class=chatlog__message-container data-message-id=1054822749962502316><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/20/2022 1:09 PM">13:09</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>(no prods)</span></div></div></div></div><div id=chatlog__message-container-1054822785978990662 class=chatlog__message-container data-message-id=1054822785978990662><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/20/2022 1:09 PM">13:09</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>MAKE SURE TO KEEP BEING ACTIVE IF U DONT WANT TO FUCKING DIE</strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1055135070521917450 class=chatlog__message-container data-message-id=1055135070521917450><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/739519254201761793/b0ed2f4676653a7d497438d72867e356.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(209,11,11) title=Chiibichi#3720 data-user-id=739519254201761793>Chiibichi</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1055135070521917450>12/21/2022 9:50 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> day action deadline is in 1 hour!!! Make sure to talk to not get proddeathed!!!!</span></div></div></div></div><div id=chatlog__message-container-1055135106051887164 class=chatlog__message-container data-message-id=1055135106051887164><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/21/2022 9:50 AM">09:50</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Thats alll &gt;~&lt;</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1055169755654398143 class=chatlog__message-container data-message-id=1055169755654398143><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1055169755654398143>12/21/2022 12:07 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> EoD in 1h</span></div></div></div></div><div id=chatlog__message-container-1055169765125140530 class=chatlog__message-container data-message-id=1055169765125140530><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/21/2022 12:07 PM">12:07</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>(also prods)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1055183281924087919 class=chatlog__message-container data-message-id=1055183281924087919><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1055183281924087919>12/21/2022 1:01 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>prods first, lets see if anyone got modkilled : D</em></span></div></div></div></div><div id=chatlog__message-container-1055183384760029274 class=chatlog__message-container data-message-id=1055183384760029274><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/21/2022 1:02 PM">13:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Oh look we have</span></div></div></div></div><div id=chatlog__message-container-1055183397774958663 class=chatlog__message-container data-message-id=1055183397774958663><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/21/2022 1:02 PM">13:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>winners</strong></span></div></div></div></div><div id=chatlog__message-container-1055183924533411910 class=chatlog__message-container data-message-id=1055183924533411910><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/21/2022 1:04 PM">13:04</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="Ironfire#5410">@me</span> 3/3 (0/20 messages) -&gt; Modkill
+<span class="chatlog__markdown-mention" title="Bionic#2070">@Bionic</span> 3/3 (1(20 messages) -&gt; Modkill
+<span class="chatlog__markdown-mention" title="Taco!#6969">@Taco!</span> 1/3 (7/20 messages) Be more active cmon
+<span class="chatlog__markdown-mention" title="ʍǟֆᏦɛɖ ɛք#6316">@ʍǟֆᏦɛɖ ɛք</span> 1/3 (6/20 messages) why is it both replacements for people who were force replaced for inactivity are getting prodded <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="😭"
+    title="sob"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f62d.svg"></span></div></div></div></div><div id=chatlog__message-container-1055185348176650260 class=chatlog__message-container data-message-id=1055185348176650260><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/21/2022 1:09 PM">13:09</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<strong><u>- - - System - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="Ironfire#5410">@me</span> has been modkilled for inactivity
+- <span class="chatlog__markdown-mention" title="Bionic#2070">@Bionic</span> has been modkilled for inactivity
+
+<strong><u>- - - Announcements - - -</u></strong>
+
+- None
+
+<strong><u>- - - Day 5 Ends - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="Bionic#2070">@Bionic</span> has been modkilled.
+They were <strong>Hoglin - Player</strong>
+
+- <span class="chatlog__markdown-mention" title="Ironfire#5410">@me</span> has been modkilled.
+They were <strong>Hack Client Enjoyer - Killing Glitch</strong>
+
+- <span class="chatlog__markdown-mention" title="Algebra#2356">@Algebra</span> has been voted out.
+They were <strong>Potato - Player</strong>
+
+<strong><u>- - - Night 5 Starts - - -</u></strong>
+
+EoN: <span class="chatlog__markdown-timestamp" title="Thursday, December 22, 2022 1:00 PM">12/22/2022 1:00 PM</span>
+EoS: <span class="chatlog__markdown-timestamp" title="Thursday, December 22, 2022 11:00 AM">12/22/2022 11:00 AM</span>
+
+You may start sending me actions now.
+I will update the graveyard, alive list, etc soon.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1055593580078579732 class=chatlog__message-container data-message-id=1055593580078579732><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1055593580078579732>12/22/2022 4:12 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> awfully sorry. Night feedback coming out.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1055596099206914078 class=chatlog__message-container data-message-id=1055596099206914078><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1055596099206914078>12/22/2022 4:22 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<strong><u>- - - Night 5 Ends - - -</u></strong>
+
+- <span class="chatlog__markdown-mention" title="Paint#4618">@Paint</span> died last night.
+They were killed by a Hacker.
+Their role was <strong>Godrod - Player</strong>
+
+- <span class="chatlog__markdown-mention" title="Dartrevas#1702">@Dartrevas</span> died last night.
+They were killed by a Glitch.
+Their role was <strong>Conduit Power - Player</strong>
+
+-&gt; <span class="chatlog__markdown-mention">#deleted-channel</span> etc will be updated shortly.
+
+<strong><u>- - - Day 6 Starts - - -</u></strong>
+
+EoD: <span class="chatlog__markdown-timestamp" title="Saturday, December 24, 2022 1:00 PM">12/24/2022 1:00 PM</span>
+EoS: <span class="chatlog__markdown-timestamp" title="Saturday, December 24, 2022 11:00 AM">12/24/2022 11:00 AM</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1055772288340983919 class=chatlog__message-container data-message-id=1055772288340983919><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-1055772288340983919>12/23/2022 4:02 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>What a close game</span></div></div></div></div><div id=chatlog__message-container-1055772670660194364 class=chatlog__message-container data-message-id=1055772670660194364><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/23/2022 4:03 AM">04:03</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line CO</span> 
+
+<span class="chatlog__markdown-mention" title="Taco!#6969">@Taco!</span> has been voted out.
+
+They were <strong>C418-11 - Killing Glitch</strong>
+
+<span class="chatlog__markdown-mention" title="Duncan#0078">@Marisa Kirisame</span> has been killed by a Glitch.
+Their role was <strong>Warden - Hacker</strong>
+
+
+Due to the game becoming a 1v1 between a Hacker and a Player without the capabilities to produce a stalemate or victory, the Hackers win by default.
+
+<strong>The Hackers, Griefers and Traitors win</strong></span></div></div></div></div><div id=chatlog__message-container-1055773688034775060 class=chatlog__message-container data-message-id=1055773688034775060><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="12/23/2022 4:07 AM">04:07</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Winners
+
+<span class="chatlog__markdown-mention" title="hx25#9475">@hx25</span> as <strong>Dripstone Block - Hacker Head</strong>
+<span class="chatlog__markdown-mention" title="very sad yeehaw#0330">@very sad yeehaw</span> as <strong>Goathorn - Hacker Support</strong>
+<span class="chatlog__markdown-mention" title="Duncan#0078">@Marisa Kirisame</span> as <strong>Warden - Hacker Deception</strong>
+<span class="chatlog__markdown-mention" title="SpaceZeri#7668">@SpaceZeri</span> as <strong>Parrot - Hacker Investigative</strong>
+
+<span class="chatlog__markdown-mention" title="A Bunch Of Atoms Glued Together#7869">@x&#179;</span> as <strong>Villager - Griefer Head</strong>
+<span class="chatlog__markdown-mention" title="MIH#7775">@MIH</span> as <strong> Llama - Griefer Support</strong>
+<span class="chatlog__markdown-mention" title="how#5838">@how paradox</span> as <strong>Creeper - Griefer Tactical</strong>
+<span class="chatlog__markdown-mention" title="kirin yang#0422">@kirin yang</span> as <strong>Enderman - Griefer Investigative</strong>
+
+<span class="chatlog__markdown-mention" title="evon.#1337">@evon.</span> as <strong>Jeb_ - Hacker Traitor Investigative</strong>
+<span class="chatlog__markdown-mention" title="Dum#5256">@Dum</span> as <strong>TNT - Griefer Traitor Tactical</strong></span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 82 message(s)</div></div>

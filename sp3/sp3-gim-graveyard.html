@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - sp3-gim-graveyard</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_295d0e767e69da88045ada76f88d9631.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>— Game Archives — / sp3-gim-graveyard</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-865338437287673897 class=chatlog__message-container data-message-id=865338437287673897><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-865338437287673897>07/15/2021 5:06 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Since playerlist is so big all flips will go here as well to keep things easy to find :)</span></div></div></div></div><div id=chatlog__message-container-865338483115950130 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=865338483115950130><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="07/15/2021 5:06 PM">17:06</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Summary Graveyard:
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Meowy (Lynched D1) - Devoted Maid
+Springy (Killed N1) - Harvey Brooks
+Ile (Lynched D2) - Trinity Killer
+Sepaa002 (Killed N2) - Chef
+Duncan (Killed D3) - Squire
+Meteor (Killed D3) - Kyubei
+Eqsy (Lynched D3) - Strategist
+Mike (Lynched D4) - Superbia
+Kon (Killed N4) - Agent Nightshade
+Era (Lynched D5) - Aquamarine
+SomeNiceDeath (Killed N5) - Agent Hemlock
+Suki (Lynched D6) - Electrician
+Shark (Lynched D7) - Invidia
+Pay_P (Killed N7) - Pacifistic Time Traveler
+A Bunch of Atoms Glued Together (Lynched D8) - Invoker
+Mrawry (Died D8) - Cicada
+Meuh (Killed N8) - Soother
+KingdomClasher (Lynched D9) - Photographer
+Bee (Killed N9) - Knight
+Bean (Lynched D10) - Dmitry Komolov
+Forever (Lynched D11) - Spear Soldier</code></span> <span class=chatlog__edited-timestamp title="08/16/2021 9:07 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-866440938007822356 class=chatlog__message-container data-message-id=866440938007822356><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-866440938007822356>07/18/2021 6:06 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Meowy was Lynched Day 1. They were Devoted Maid!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">70) Devoted Maid - Neutral Benign
+
+Once per game can the Devoted Maid decide to exchange her role card with the role card of the player that would be lynched that day as a day action.
+The Devoted Maid has to do this before a lynch is either hammered or the day has ended in plurality.
+The role card will then be swapped with that of the Devoted Maid and the Maid will receive a copy the role of the lynched player. The Village will not know who the Maid is that took on the role of the lynched player and the card lynched will be that of the Devoted Maid. 
+
+Additionally, if the Devoted Maid wins with the card of the lynched player, then the lynched player will always also win, even if they would have usually lost. 
+If the lynched player had a target, then the Devoted Maid will have the same target.
+If the lynched player had a card with charges, then the Devoted Maid will only be able to use not yet expended charges.
+
+- Swapping the card does not make the person the maid swapped with lose the game, they will still be able to win with their win condition from the grave if they had the ability to do so with their role as well as they are able to use any ability from the grave may they have had any such ability given by their role card.
+
+Wincon: Take another players role card and win with it.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-866802156799787009 class=chatlog__message-container data-message-id=866802156799787009><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-866802156799787009>07/19/2021 6:02 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Springy was killed by Aquamarine Night 1. They were Harvey Brooks!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">103) Harvey Brooks - Town Killing
+
+Outlaw: Twice per game during the night you may hand a player a gun, they may then use that gun during the day
+The Broker: During the day you may send an anonymous private message to another player. They may not respond. 
+
+Attribute:
+Betrayal [Passive] - Should the player you gave a gun shoot you they will die instead by your own bullet.
+
+Goal: Town Wincon</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-867679783542587423 class=chatlog__message-container data-message-id=867679783542587423><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-867679783542587423>07/22/2021 4:09 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Ile was Lynched Day 2. They were the Trinity Killer!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">180) The Trinity Killer - Neutral Killing
+
+A serial killer said to kill in threes.. From the amazing series &#39;Dexter&#39;.
+
+Attack: Variating
+Defense: Basic
+
+Passive:
+
+Family Man - If you are investigated, people will just see you as a town role selected by you (you can change your pick any time). If you didn&#39;t select any yet when being investigated, a random town role would be selected. This p much immunity against investigative roles works against any kind of role except for roles that track or watch or bypass investigative immunity.
+
+Abilities:
+
+Bathtub - Deal a basic attack to a player during the night.
+
+Jump - Deal a basic attack to a player during the night, that bypasses protection and isn&#39;t trackable or watchable.
+
+Bludgeoning - Deal a powerful attack to a player during the night. You don&#39;t have the Family Man passive when doing this.
+
+You always have to use Bathtub first, next Jump, next Bludgeoning, next Baththub again etc.
+You only move on to the next if you kill succeeded
+
+If you attempt to kill, but fail, your Family Man passive also isn&#39;t active.
+
+Wincon: Basic NK wincon, so it can win with plenty of NEs and NBs but has to kill p much anything else including different NKs</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-867888259661168681 class=chatlog__message-container data-message-id=867888259661168681><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-867888259661168681>07/22/2021 5:58 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Sepaa002 was killed Night 2 by Spear Soldier. They were Chef!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">165) Chef - Town Support
+
+You are a cook, providing meals for the town.
+
+Abilities:
+A Delicacy
+Every night you may give someone a meal, it will provide a buff based on their alignment. The buff will go away the next night if it&#39;s an increase. They will be notified that they were fed a meal and what it gave them. This ability fails if it is used on a role that can reveal itself, such as a mayor or innocent child.
+
+Town: Adds an extra charge to a random charge-based ability they may have. They will also be healed.
+Mafia: Allows them to perform an action alongside the factional kill the next night.
+Coven (before any Coven have the Necronomicon): Makes them detection immune and roleblock immune.
+Coven (when any of them are holding the Necronomicon): Makes their visit astral.
+Neutral Killing: Makes them detection immune and roleblock immune.
+Neutral Evil: Tells them the name of one town and one (Mafia/Coven/NK) player. They will not know which is which.
+Neutral Chaos: Nothing happens
+Neutral Benign: Gain a one time vest which gives them basic defense. They may choose to use it at any time alongside other abilities.
+
+Town Wincon</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-867891985826447390 class=chatlog__message-container data-message-id=867891985826447390><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-867891985826447390>07/22/2021 6:12 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Duncan was shot Day 3. They were Squire!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">178) Squire - Town Citizen
+
+Passives
+
+Kinship - If this rolls then roll a Town Protective role. Additionally are you always informed when you are target of a protective action, and your protector(s) will learn your role at the end of the phase they use their ability on you.
+
+Night ability
+
+Seek Guidance - Each night target another player, you will know if they are a town protective or not. You may not use this ability again after finding one. After you found a town protective will you assume their role as soon as they die.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-867981240144388116 class=chatlog__message-container data-message-id=867981240144388116><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-867981240144388116>07/23/2021 12:07 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Meteor was shot Day 3. They were Kyubei!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">107) Kyubei - Mafia Espionage
+
+If you roll then you are not counted towards the maximum Mafia members, unless one of two things are true:
+1. There is another Mafia Espionage
+2. The game uses a list instead of an all any setup.
+
+The mafia knows that an Espionage role is in the game. 
+You or the mafia do not know who each other are.
+
+
+You are an Alien lifeform sent to earth. You look like an adorable alien pet, adorable along the lines of a kitten or puppy and you show yourself as granting the wishes of those with desires they think are for a pure cause, when in fact they are selfish at their core.
+
+Passive:
+
+Should you target a Mafia Head with any of your actions then you will open a private chat with them, and only them, in which only YOU can send messages in. The chat will only be open during the night.
+
+Day:
+
+- During the day you may choose a player to protect at night. They will be informed of being nursed back to health by a doctor should they be attacked.
+
+Night:
+
+- During the night you may choose a player to grant a gun to for the next day. The gun deals a basic attack, can only be used during the following day and is used by typing /shoot [name of target] [ping gamehost] into the voting channel.
+The receiving player of the gun will know what the gun does and how it works, but not who or what gave it to them.
+You may grant another player a gun twice.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-869701192534609990 class=chatlog__message-container data-message-id=869701192534609990><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-869701192534609990>07/27/2021 6:02 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Eqsy was lynched Day 3. They were Strategist!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">29) Strategist - Mafia Head
+
+Attack - Basic (if performing the factional kill)
+Defense - Basic (if not performing a kill that night) 
+
+Attributes:
+
+- You are role block immune while preparing and for your first attack when using your preparation charges.
+
+If the Mafia didn’t perform an attack yet. (Since game start)
+
+- You will be seen innocent by Sheriffs. 
+- You will be seen in the Citizen Pool for Investigators. (you will know if someone investigated your role, and as what citizen role they saw you)
+- If you decide to stay at home, preparing for the following nights, you will hold your mafia close by your side giving you basic defense.
+
+After the Mafia performed an attack.
+
+- You will show as Suspicious to Sheriffs, but remain in the same pool for Investigators.
+- If you kill, then you will lose your basic defense.
+
+Abilities:
+
+- You may decide to prepare instead of attacking during the night giving you a preparation charge, this will consume the factional kill.
+- As long as you are alive, you’re the only Mafia Member that can perform the factional kill.
+- You can prepare up to two times (so night 1 and night 2 for example). 
+- Two is your maximum for charges.
+- Kills combining preparation charges work as follows: The amount of kills is equal to [Num of charges] + 1.
+If you prepared for night one and two you can kill 3 targets night 3. This is the maximum amount of preparation, meaning 3 kills in one night is the most you can do.
+- You will be seen visiting all of the targets you attack.
+- If you die before using your charges then they will be lost.
+- After the first time you attacked, you lose the ability to prepare. You may attack a player with a basic attack every night after this if you perform the factional kill.</code></span></div></div></div></div><div id=chatlog__message-container-869701275724431360 class=chatlog__message-container data-message-id=869701275724431360><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="07/27/2021 6:02 PM">18:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Mike was lynched Day 4. They were Superbia!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">203) Superbia
+Coven Head
+Attack: None
+Defense: None
+—————
+You may be known as Pride, but a more accurate moniker is Hubris. All those disgusting townspeople don’t have any right to stay here. All of it should be yours. All of it. And when you finally take control of this wretched Town, you’ll be able to rule it as your domain. You’re like a god, aren’t you? Once you take control, you will be a god.
+
+Day Ability:
+
+Father of Sins [x∞] — Select a player from the Graveyard every day. You can pick one of their abilities to get a single charge of to use for yourself. You may also choose to gift a charge to one of the members of the Coven, if such a situation applies. You may choose every dead player only once on every even day. You may only pick players that died with their roles revealed. Once the Coven receives the Necronomicon, you may do this every day.
+
+Deadly Temptation [x2] — Select someone. If the Coven chooses to kill other players this night, then the player you chose will be seen visiting a random one of the Coven’s victims. This action is Astral. 
+
+Attributes:
+
+Pleasant Facades — You cannot gain the Necronomicon on the first rotation. You will receive it if you are alive after all other Coven members have died. Once you receive it you may attack a player with a basic attack instead of your night actions.
+
+Prideful — You are roleblock immune. Once the Coven receives the Necronomicon, you are also detection immune.
+
+Once the Coven receives the Necronomicon: Pseudo-god — You gain Basic defense.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-870063277139447818 class=chatlog__message-container data-message-id=870063277139447818><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-870063277139447818>07/28/2021 6:00 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Kon was killed by Alex, Witch of Misfortune Night 4. They were Agent Nightshade!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">59) Agent Nightshade
+Town Support
+
+Abilities
+Check in Report: You have a private night time chat with Agent Hemlock
+
+It&#39;s just Buisness: Twice per game during the night you may roleblock your target
+
+Attributes: 
+CSIS Affiliations: If this role ends up rolling so will [58] Agent Hemlock
+
+Goal: Town wincon</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-870790177692450836 class=chatlog__message-container data-message-id=870790177692450836><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-870790177692450836>07/30/2021 6:09 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Era was Lynched Day 5. They were Aquamarine!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">116) Aquamarine
+Coven Evil
+Attack: Powerful/Basic
+Defense: None
+—————
+As a harbinger of the power of the ocean, you can harness the waves to manipulate people to your will. Of course, you can’t act in an instant.
+
+Abilities:
+
+Electrify [x0] — Gather up salt water from the ocean during the night and nonlethally electrify your target, rendering them inable to act for the night. WITH THE NECRONOMICON: pierces roleblock protection.
+
+Drown [x0] — Choose someone to drown during the night. They will be unable to vote, talk, or perform any action the next day. WITH THE NECRONOMICON: pierces protection for any of the nullified actions above. 
+
+Dehydrate [x1] — Suck the water out of someone’s body, killing them instantly. Powerful attack, and gives you an extra charge of either Electrify or Drown (player’s choice). However, Dehydrate can only be used once, and no more charges can ever be gained, nor can Dehydrate be given to anyone else and duplicated. Other roles will not be able to use Dehydrate. The Necronomicon allows for this ability to be sourced from the waves, but it will only have a Basic attack.
+
+Attributes: 
+
+Sourcing From the Waves — Each night, either choose to spend one of your action charges or to absorb an action charge of either Electrify or Drown from the ocean. Absorbing action charges does not count as an action, and instead counts as idling, and will be performed automatically if the player does not choose an action (the chosen action charge in question will be modified). If the player is forced into acting while they have no charges, they will ignore the conditions of their forced acting and will instead absorb an action charge of their choice.
+
+Volatile Tides — The player cannot gain any charges of their base abilities other than from Sourcing From the Waves. You are also roleblock immune.
+
+Wincon: Standard Coven Wincon</code></span> <span class=chatlog__edited-timestamp title="07/31/2021 5:55 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-871150324088463401 class=chatlog__message-container data-message-id=871150324088463401><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-871150324088463401>07/31/2021 6:00 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>SomeNiceDeath was killed by the Mafia and Alex, Witch of Misfortune Night 5. They were Agent Hemlock!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">58) Agent Hemlock
+Town Killing
+Attack Basic
+
+Abilities
+Check In Report: You have a private night time chat with Agent Nightshade. 
+
+Ready to Strike: You have a 1-shot day vigilante shot
+
+Attributes
+CSIS Affiliations: If this role ends up rolling so will [59] Agent Nightshade
+
+Goal: Town Wincon</code></span> <span class=chatlog__edited-timestamp title="07/31/2021 9:37 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-871886337689673729 class=chatlog__message-container data-message-id=871886337689673729><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-871886337689673729>08/02/2021 6:45 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Suki was lynched D6. They were Electrician!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">189) Electrician - Mafia Support
+
+Abilities:
+Blackout: You may mess with the lights at your targets house causing their visit to fail and all visits on them to fail. You may only use this ability twice.
+
+Electrocution: You may electrify a player causing their vote to be ineffective the following Day. You may only use this ability once.
+
+Attributes:
+Tacky Wiring: [Passive] There&#39;s a 10% chance you will be electrocuted yourself whilst doing a night action causing your vote to be ineffective the following day.
+
+Goal: Mafia Wincon</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-872982158933893150 class=chatlog__message-container data-message-id=872982158933893150><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-872982158933893150>08/05/2021 7:19 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Shark was lynched Day 7. They were Invidia!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">151) Invidia
+Mafia Tactical
+Attack: None
+Defense: None
+—————
+As your codename implies, you are envy personified. Or, so they say. Listen, you’re just jealous everyone has so much more talent and things than you. Can’t you steal that away from them? You deserve to be just as good as them, if not better, than them.
+
+Abilities:
+
+Envious of Talent [x∞] — Copy a random ability charge from someone. You can either choose to gift this ability charge to someone else in the Mafia or use it for yourself. The exact name of the ability won’t be revealed, only the description (which will be paraphrased).
+
+Envy Personified [x1] — Steal all ability charges gifted to Mafia members. 
+
+Attributes:
+
+Hate — Anytime a negative action is used on you (killing, roleblocking, etc.), copy the charge used to perform that negative action on you.
+
+Possessive — Other roles cannot use ability charges copied using your ability. (Example: Necromancer will not be able to use ability charges you copied.)
+
+Wincon: Standard Mafia Wincon</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-873346261892345917 class=chatlog__message-container data-message-id=873346261892345917><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-873346261892345917>08/06/2021 7:26 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Pay_P was killed by Alex, Witch of Misfortune Night 7. Their role was Pacifistic Time Traveler!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">110) Pacifistic Time Traveller - Town Protective
+
+You are a time traveller trying to prevent anyone being caused harm by others. So you set out to convince the murderers in town to lay down their work.
+
+Every night target two players. Target 1 and Target 2.
+
+For target 1:
+
+Target one has to be a player attempting to murder another player. If you successfully choose a player attempting to use a killing action (attacks or poisons etc) then you will go back in time to stop that action from being successful that night. If they use an action that does not kill then you won&#39;t stop that action with this ability. 
+
+For target 2:
+
+If Target two is visited by a malicious visitor then you will go back in time to stop one of them, though you will always decide to go for the most obvious one of them..
+
+Order: Any non-killing Coven/Mafia -&gt; Any non-killing Town/Neutrals -&gt; Any attackers.
+
+Your targets are informed that a Time Traveller stopped them, but you will not be informed should you stop anyone.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-874155423920422932 class=chatlog__message-container data-message-id=874155423920422932><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-874155423920422932>08/09/2021 1:01 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Atoms was lynched Day 8. They were Invoker!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">154) Invoker - Neutral Evil
+
+Night action:
+
+Every night you may choose a player as your target.
+If your target dies during the night you choose them then you become completely immune to death for that night and the following day.
+This includes lynch immunity. 
+If you are lynched while immune then instead the day will end in a no lynch and go into night phase and the town will be informed that you were lynch immune.
+
+Additionally will all your targets be seen as the opposite of their actual alignment, unless they are neutral, during the night you choose them.
+Town will be seen as Mafia.
+Mafia is seen as Town.
+Coven is seen as Town.
+
+
+Day Action:
+
+If you successfully chose a target that died during the same night and when you are therefor immune during a day, then during that day you may use the following ability:
+Choose one player, they will be permanently seen as their opposite alignment until your death, unless they are neutral.
+Town will be seen as Mafia.
+Mafia is seen as Town.
+Coven is seen as Town.
+
+You win if the town loses.</code></span></div></div></div></div><div id=chatlog__message-container-874155649351700590 class=chatlog__message-container data-message-id=874155649351700590><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="08/09/2021 1:02 AM">01:02</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Mrawry died Day 8. They were Cicada!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">118) Cicada
+Neutral Evil
+Attack: None
+Defense: Basic
+—————
+Sometimes you need to be a cicada and screech loudly outside of someone’s window at 2 am. And sometimes you need to be a cicada and just annoy people until they fucking die.
+
+Abilities:
+
+Screech [x3] — Screech loudly outside a player’s house. All actions are redirected away from them, except killing actions, which are not affected by this.
+
+Harassment [x2] — Roleblock a player with your deafening cries, forcing them to stay home.
+
+Targetting [x1] — One random killing action will be redirected to a player of your choice. Order of redirecting priority: Mafia &gt; Coven &gt; Neutral &gt; Town. 
+
+Attributes:
+
+Mating Call — You have roleblock protection.
+
+Cicada Hatred — You are unable to use an ability on a player twice in a row.
+
+Brood Emergence — You die if evils have not won by D8.
+
+Wincon: Live to see the Town lose.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-874692883289096272 class=chatlog__message-container data-message-id=874692883289096272><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-874692883289096272>08/10/2021 12:37 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Meuh was killed by Alex, Witch of Misfortune Night 8. They were Soother!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">175) Soother - Town Support
+[Allomancer]
+
+You are a Brass Misting, able to burn Brass to quiet other&#39;s emotions. This is from Brandon Sanderson&#39;s Mistborn series, if you like any form of Fantasy, I highly suggest you read it. https://www.amazon.com/Mistborn-Final-Empire-Book-No/dp/0765350386 
+
+Every night you may choose to burn your metals. You will have 4 vials of brass flakes which you may use. They will be burned during the night and next day. If you do not use them, your passive and active abilities will not activate.
+
+Passives (triggered if you choose to burn metals):
+Calming Aura
+Everybody will be more calm around you, and they will not want to vote you, making you have a hidden -1 vote on your votecount during the day.
+
+Abilities (triggered if you choose to burn metals):
+Wave of Emptiness
+You may supress all of someone&#39;s emotions, they will be unable to muster the intent to do anything, roleblocking them. They will also be unable to vote the next day.
+
+Removal of Inhibitions
+You may remove any inhibitions a person may have making them lock in the first action they chose that night. For example, if they chose to target Player A, but then changed to Player B, they would still target player A anyway.
+
+{Mistborn Series}
+Town Wincon</code></span> <span class=chatlog__edited-timestamp title="08/10/2021 12:38 PM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-875512098090803240 class=chatlog__message-container data-message-id=875512098090803240><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-875512098090803240>08/12/2021 6:52 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>KC was lynched Day 9. They were Photographer!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">172) Photographer - Town Investigative
+
+You are a great photographer, world renowned, in fact. You use your abilities to capture events in order to go back through them later.
+
+Abilities:
+Snapshot
+Take a picture of someone&#39;s house. You may look at it and see everyone who visited them that night.
+
+Investigate
+You may do this during the day. Look back through photos you took the previous day. If anyone was lynched, you may look through who voted them and will be told if there were any mafia or coven voting them. You will not know who the mafia or coven who voted them are, nor will you know if there was more than one.
+
+Town Wincon</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-875890807272517705 class=chatlog__message-container data-message-id=875890807272517705><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-875890807272517705>08/13/2021 7:57 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Bee was killed by Alex, Witch of Misfortune Night 9. They were Knight!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">48) Knight - Town Protective
+
+Skilled Defense: Every second night (even nights) target two players. They will receive basic defense. It will be announced if they were attacked.
+
+(Message/s)
+
+[Player] was attacked last night.
+
+
+[Player1] and [Player2] were attacked last night.</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-876539882888134737 class=chatlog__message-container data-message-id=876539882888134737><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-876539882888134737>08/15/2021 2:56 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Bean was Lynched Day 10. They were Dmitry Komolov!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">101) Dmitry Komolov - Town Support
+
+Abilities:
+Getaway Pilot: During the Night you may escort someone to their target, their visit will then become astral and they can not be redirected nor roleblocked. However should your target have a killing ability you will roleblock them yourself. (You will not be notified if you roleblock the target or Escort them)
+
+Attributes: None
+
+Goal: Town Wincon</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-876995334037966908 class=chatlog__message-container data-message-id=876995334037966908><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/183674106976141312/26a057d8a399994cd6b892351130571d.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Quack-Attack#5514 data-user-id=183674106976141312>Quack-Attack</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-876995334037966908>08/16/2021 9:06 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Forever was Lynched Day 11. They were Spear Soldier!
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">228) Spear Soldier - Town Killing
+
+Abilities:
+Throwing Spear: Twice per game during the night may throw a spear dealing a basic attack to the player of your choosing.
+
+Attributes:
+Long Range Attacks: [Passive] You are roleblock immune
+
+Goal: Town Wincon</code></span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 23 message(s)</div></div>

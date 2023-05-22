@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - sp4-graveyard</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_295d0e767e69da88045ada76f88d9631.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>— Game Archives — / sp4-graveyard</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-881933587836973127 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=881933587836973127><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-881933587836973127>08/30/2021 12:09 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-yaml">Mini Graveyard:
+
+D1: Lynched - Atoms - Rias, Diviner of Discord - Wild Witch Leader
+D2: Lynched - Zach - Exurbia, Witch of the Worlds Edge - Coven
+D3: Lynched - Mrawry - Valencia, the Sand Witch - Coven
+D4: Lynched - Superhitters - Kreee, the Dumb Witch - Coven
+N4: Sacrificed by Garcia - Springy - Noel, Witch of Nuzzles - Coven
+N4: REVIVED - Mrawry - Valencia, the Sand Witch - Coven
+D5: Lynched - Dragon - Agatha, Bird Witch of Ice - Coven Traitors
+N5: CORRUPTED - Suki - Lunarett, ??? - ???
+D6: Lynched - Ironfire - Anderson, Priest of the Vatican Church - Vatican Church High Priest
+N6: Magic Exhausted - Eqsy - Leaf, Witch of the Wild - Coven 
+D7: Lynched - Sylvie - Delpgie, the All-Seeing Witch of Knowledge - Coven Traitors Leader
+N7: CORRUPTED - Mrawry - Valencia, ??? - ???
+D8: Lynched - Quack - Lunexia, the witchy girl - Coven Head</code></span> <span class=chatlog__edited-timestamp title="09/19/2021 4:03 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-881933636469923852 class=chatlog__message-container data-message-id=881933636469923852><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="08/30/2021 12:09 PM">12:09</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Rias, Diviner of Discord - Wild Witch Leader
+
+You are not exactly the most talented at witchcraft. All you can produce is a sly trick here and there altering your opposites perception a little. This usually results in steering up  misunderstandings between others, which you take great delight in watching as they unfold.
+
+<strong>Passive</strong>
+
+Silver Tongue: Every phase you may send away one harmful or killing intent visitor. You are informed if you did, but not for what reason. 
+
+- During the day you will send away the first player that attempts to harm you.
+- During the night you will send away visitors with the priority of: Harmful visits (RBs, Redirects etc) &gt; lingering injuries or poisons &gt; Direct attacks.
+- The first time someone tries to investigate if you are on their team or not, you will send them away as the highest priority that night.</span></div></div></div></div><div id=chatlog__message-container-881933658318049350 class=chatlog__message-container data-message-id=881933658318049350><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="08/30/2021 12:09 PM">12:09</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Night Ability</strong>
+
+Intervene: You may visit a player every night, this can have multiple effects. 
+
+- If your target is visited by nobody then you will roleblock your target.
+- If your target is visited by one other player then you role block that player and your target.
+- If your target is visited by two or more players, then you will redirect them to instead visit each other forming a circle of visits should there be more than two other visitors. 
+-&gt; In the last scenario, the order will be taken from the alive lists neighbouring position. The visitor that is from the top of the list the first will visit the player that comes next going down the list, going further down for all other visitors. 
+
+If any player you redirect is redirection immune, then you will not affect them at all. If the remaining amount of visitors is less than two then they will instead be role blocked, if they are still two or more then the remaining players will be redirected into each other as usual, leaving out redirection immune players.
+
+You will know the number of targets your ability affected, but not what it did and role block immune players will also be listed.</span> <span class=chatlog__edited-timestamp title="08/31/2021 8:23 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-881933678727528528 class=chatlog__message-container data-message-id=881933678727528528><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="08/30/2021 12:09 PM">12:09</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Day Ability</strong>
+
+Bad Mouth: You may bad mouth another player. This will leave a <strong>permanent</strong> additional vote on them. This vote will stay on them as long as you are alive.
+
+- The additional votes will disappear if you die, as your magic that affected the other witches leaves the community they will see that you were the one to incite hatred between them.
+- If another player uses a day action on the same person you bad mouthed that day, then they will know your name. 
+- You may not bad mouth the same player twice in a row, in order to not gain too much suspicion on yourself. You have to wait one day until you can target the same player again.
+
+<strong>Necronomicon Passive</strong>
+
+Create a Copy for yourself: The first time you receive the Necronomicon you will create a copy of it, it will be passed on should you die with the copy.
+
+Smooth Talker: Silver Tongue is upgraded, you will now also send away anyone trying to investigate you for your role, abilities or alignment in addition to one other harmful visitor.
+
+<strong>Necronomicon Active</strong>
+
+Great Revelation: When holding the Necronomicon you become empowered in your mind altering magic. During the day you may type /reveal <span class="chatlog__markdown-mention" title="Lunex#0727">@Lunexia on Osu!</span> into the voting channel, should you do so then you will be revealed as the &quot;Great Diviner&quot;. 
+
+- Revealing will make you gain two additional votes and you will stay revealed as long as you have the Necronomicon.
+
+<strong>Necronomicon passage</strong>
+
+You will lose The Necronomicon at the end of the night of the day you received it, regardless of if you decided to use it&#39;s action, or not.
+This does not affect your copied Necronomicon.
+
+<strong>Win Condition</strong>
+
+Eliminate anyone that stands in the Wild Witch Union&#39;s path.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-883021892376748082 class=chatlog__message-container data-message-id=883021892376748082><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-883021892376748082>09/02/2021 12:13 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Who would ever believe the Doomsday theorist?</strong> 
+
+Exurbia, Witch of the Worlds Edge - Coven
+
+You bide your time on this doomed planet, waiting for the apocalypse to strike. Everything has been long doomed to fail, everybody else just hasn&#39;t seen it yet. But you did, you know, everything will fall, and with everything, you too will fall. Now, you will be trying your best to prevent this world from falling, but what can you possibly do? Your research is dedicated to prevent the world&#39;s fall, everyone in the Coven may call you a lunatic for it, but they will see, they will all see! And if they don&#39;t that&#39;s not your problem any longer. If they believe you, good for them.. if not, oh well. 
+
+<strong>Passive</strong>
+
+Doomsday Research: The world will be ending soon. Some of the witches are plotting to ruin everything, and you know it! You are the only one who could possibly stop them, and you are determined to be the one that will stop them all dead in their tracks! At the start of the game the game will automatically end in <strong>every player</strong> losing at the end of day 4, should the game not have ended by then. It is your mission to find a way to prevent this.
+
+Doomsday Bringers: There seem to be some rats within the Coven, trying to bring fall to this world. At the start of the game there will be 6 other players. You have to ensure that they are either dead, or pacified by your hands before day 4. But who are they? Where are they hiding?
+
+Doomsday Counter: You know that with every removed doomsday bringer doomsday will come, but slower. Every time one of them is eliminated the time until the final day increases by 2 phases.
+
+<strong>Night Ability</strong>
+
+Seek out the Doomsday bringers: Every night investigate another player, you will be informed if they are a doomsday bringer or not.</span> <span class=chatlog__edited-timestamp title="09/03/2021 12:38 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-883021969677762622 class=chatlog__message-container data-message-id=883021969677762622><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="09/02/2021 12:14 PM">12:14</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Day Ability</strong>
+
+Pacify the Doomsday bringers: Every day, target another player, if they are a doomsday bringer, they will be pacified. 
+
+- Players are informed of being &quot;pacified&quot;.
+
+- Players will keep the pacified status should you die. Once relieved of their Doomsday ideas they won&#39;t pick them up again.
+
+<strong>Necronomicon Action</strong>
+
+Purge: If you possess the Necronomicon, then you may decide to purge all that you have pacifieed so far.
+
+<strong>Necronomicon passage</strong>
+
+You will lose The Necronomicon at the end of the night of the day you received it, regardless of if you decided to use it&#39;s action, or not.
+
+<strong>Wincon</strong>
+
+Eliminate anyone who opposes the Coven.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-884108274876710912 class=chatlog__message-container data-message-id=884108274876710912><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-884108274876710912>09/05/2021 12:10 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>It was a bad pun.</strong>
+
+Valencia, the Sand Witch - Coven 
+
+You are a Witch born in the far south deserts of the lower part of the continent. Driven away by war and diseases spreading throughout the Sands you have found yourself in the Coven.
+
+<strong>Passive</strong>
+
+Sandy ground: Whenever you target another player there will be Sand left on the ground, starting the phase after your visit took effect.
+
+<strong>Night Ability</strong>
+
+Steal Sight: Choose another player, they will be unable to use their day action during the following day. They will only learn of this if they attempt to use one.
+
+<strong>Day Ability</strong>
+
+Obscure: You summon a magical Sandstorm to obscure a target of your choice, all visits on them will fail during the following night, except directly killing ones. Anyone who has their visit fail will be informed of it failing.
+
+<strong>Necronomicon Passive</strong>
+
+Veil of Sand: While holding the Necronomicon you gain roleblock immunity.
+
+<strong>Necronomicon Action</strong>
+
+Desert Tracker: If you are holding the Necronomicon, then you may choose one player you have previously visited, you will receive the names of all players that visited that player during phases after your visit that left traces behind in the sand that remained at your targets hut. The player you choose has to be alive in order for this to work.
+
+<strong>Necronomicon passage</strong>
+
+You will lose The Necronomicon at the end of the night of the day you received it, regardless of if you decided to use it&#39;s action, or not.
+
+<strong>Wincon</strong>
+
+Eliminate anyone who opposes the Coven.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-885197189155012658 class=chatlog__message-container data-message-id=885197189155012658><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-885197189155012658>09/08/2021 12:17 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>As the rolecard suggests, it&#39;s pretty dumb.</strong>
+
+<strong>also gj on lynching your retri. :)</strong>
+
+Kreee, the Dumb Witch - Coven
+
+You&#39;ve always struggled with forming your incantations properly, struggled even more with remembering the right recipe and the most with holding proper conversations as you messed up once again. Honestly, anything you do seems to be failing, even if you tried your best.. but you figured that it&#39;s not that bad, in fact do you like the randomness in your results. You misspell part of an incantation, and once instead of summoning a little flame you let it rain frogs for a minute..
+
+<strong>Passive</strong>
+
+Evading Responsibility: Whenever a non-killing action is used on you, it is redirected to a random player on your team instead. In turn can you not be saved by protective actions, or affected by any other action that doesn&#39;t intend to murder you.
+
+<strong>Night Ability</strong>
+
+Try yourself on an incantation: You choose two targets you want to use your spell on in order [Target 1] and [Target 2].
+
+You will either;
+
+- Redirect target 1&#39;s action into target 2
+- Transport target 1 and target 2 with each other
+- Role block target 2.
+
+<strong>Day Ability</strong>
+
+Try yourself on a potion: You choose a target and they will be affected by a potion you give to them. They are informed of being made to drink a potion. 
+
+The potion will either;
+
+- Make them tell you the name of their night ability
+- Make them tell you the name of their day ability
+- Make them unable to vote during the rest of the day (they are told that they cannot vote) and their current vote is removed should they have one
+
+<strong>Necronomicon Passive</strong>
+
+Evading Danger: You may choose who you redirect visitors onto during the night you hold the necronomicon, this includes killing visitors.</span></div></div></div></div><div id=chatlog__message-container-885197217013575680 class=chatlog__message-container data-message-id=885197217013575680><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="09/08/2021 12:17 PM">12:17</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Necronomicon Action</strong>
+
+Ressurection?: You may attempt to ressurect a dead player, you have to target one other player to attempt this, that player can be yourself.
+
+The results of the summoning can be;
+
+- You resurrect your target.
+- The resurrection fails.
+- You resurrect your target, but the other person dies (through healing, but not immunity).
+- You resurrect your target and the other person is protected for the night.
+- The resurrection fails and the other person dies (through healing, but not immunity).
+- The resurrection fails, but the other person is protected for the night.
+
+You may not use this ability again, once you successfully ressurected another player.
+
+<strong>Necronomicon passage</strong>
+
+You will lose The Necronomicon at the end of the night of the day you received it, regardless of if you decided to use it&#39;s action, or not.
+
+<strong>Wincon</strong>
+
+Eliminate anyone who opposes the Coven.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-885572039384125603 class=chatlog__message-container data-message-id=885572039384125603><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-885572039384125603>09/09/2021 1:07 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em><strong>Nuzzles you</strong></em></span> <span class=chatlog__edited-timestamp title="09/09/2021 1:07 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-885572042726993952 class=chatlog__message-container data-message-id=885572042726993952><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="09/09/2021 1:07 PM">13:07</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Noel, Witch of Nuzzles - Coven
+
+You are a very special member of the Coven. Many years ago you were summoned by the Coven leader as her pet, but she soon found out that you are far more capable than that. For a cat you are as smart as a human and as adapt as any other witch of the coven, if not more. All you lack is the innate ability to speak, which you soon learned to bypass by using magical telepathy.
+Now, you are adored by everyone, while respected just as much. You like dressing up like a human would, well, similar enough, with a robe, while still walking on all fours, and a hat on your head.
+
+<strong>Passive</strong>
+
+A cats charm: If your neighbours are target of a protective action, then you gain a copy of that protection for the night it is applied to them. Should their protection last longer, yours will not, unless it was directly applied to you.
+
+<strong>Night Ability</strong>
+
+Vision: You conjure a vision, which will contain the names of 5 different players every night. At least two of them will be on your team.
+
+<strong>Day Ability</strong>
+
+Reanimate: You may use the day action of a dead player.
+
+You may only use each dead player once, and you have to choose one of their day actions to use should they have multiple.
+Some day actions may not work, in which case you are informed that the action failed. You may choose to try using &quot;reanimate&quot; again during those days, using a different day action.
+
+<strong>Necronomicon Passive</strong>
+
+Protective Magic: During a night you hold the Necronomicon, you are immune to direct attacks.
+
+<strong>Necronomicon Action</strong>
+
+Insight: During a night you are holding the Necronomicon, you may choose to use &quot;Insight&quot; instead of &quot;Vision&quot;. If you do then you will receive 5 names, but instead will at least one of the 5 players named be opposing your team.
+
+<strong>Necronomicon passage</strong>
+
+You will lose The Necronomicon at the end of the night of the day you received it, regardless of if you decided to use it&#39;s action, or not.
+
+<strong>Wincon</strong>
+
+Eliminate anyone who opposes the Coven.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-886301148141719553 class=chatlog__message-container data-message-id=886301148141719553><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-886301148141719553>09/11/2021 1:24 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Ice Ice baby</strong></span></div></div></div></div><div id=chatlog__message-container-886301154693234730 class=chatlog__message-container data-message-id=886301154693234730><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="09/11/2021 1:24 PM">13:24</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Agatha, Bird Witch of Ice - Coven Traitor
+
+You are a witch with a cursed Stigma implanted into you, making you transform into a bird during the night. Your innate witchcraft abilities are that of being able to summon and control ice, which are enhanced during the night when you transform into a bird.
+Due to your curse you have been avoided by others all your life, merely being tolerated, but not really accepted in the Coven. This has made you feel disconnected from the current Coven&#39;s society over the course of time.
+Then as a witch came to you, proposing that together you could reform the current coven, making it a place where all witches can live a proud life, you were motivated into joining her endeavours.
+
+<strong>Passive</strong>
+
+Freezing Aura: Anyone visiting you or a player above or below you in the alive list at night will be unable to use their day action during the following phase. They will be informed that they were unable to use it, but not why, should they attempt to use it.
+
+This effect is only applied during the night, when you transform into a bird and when your witchcraft is at its strongest.
+
+<strong>Night Ability</strong>
+
+Glacial Prison: Every Even night you may attempt to imprison a player in ice. If they were not protected or immune to lingering or direct attacks then they will be announced missing starting the following day, and continually announced missing at the start of future days. Additionally are they fully removed from play for the duration of their imprisonment.
+
+Anyone currently held by your ice will be freed should you die at any point.
+This ability can only be used by you.
+This ability cannot affect other Coven Traitors.
+
+<strong>Day Ability</strong>
+
+Inflict Cold: You speak an incantation which will summon the effects of a severe cold in your target. They will become unable to change, add or remove their vote for the remainder of the day. They are informed that they feel sick and will no longer participate in voting.</span> <span class=chatlog__edited-timestamp title="09/11/2021 5:31 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-886301202634145802 class=chatlog__message-container data-message-id=886301202634145802><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="09/11/2021 1:24 PM">13:24</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Necronomicon Passive</strong>
+
+Enhanced Ice Affiliation: Should you receive the Necronomicon, then you will be able to either target two players with <strong>Inflict Cold</strong> or use <strong>Freezing Aura</strong>, even if it is an even night.
+
+<strong>Necronomicon Ability</strong>
+
+Shatter Ice: You become able to draw out the life from all who are imprisoned in ice. As your night action you become able to kill everyone who is currently imprisoned.
+
+<strong>Necronomicon passage</strong>
+
+You will lose The Necronomicon at the end of the night of the day you received it, regardless of if you decided to use it&#39;s action, or not.
+
+<strong>Traitor Necronomicon Passive</strong>
+
+Enhanced Ice Attribute: Should you hold the traitor Necronomicon, then anyone trying to receive if you are on their team or not, will receive that you are on their team as you manipulate their perception using your ice magic. 
+
+Enhanced Endurance: When holding the Necronomicon you become immune to lingering injuries and poisons.
+
+Enhanced Ice Magic: You become able to imprison a player every night, including odd and even ones.
+
+Enhanced Transformation: You transform and become more adapted to your bird body. You become immune to role blocking at night. 
+
+<strong>Traitor Necronomicon Active</strong>
+
+Siphon Life: You become able to draw out the life from all who are imprisoned in ice. As your night action you become able to kill everyone who is currently imprisoned. Additionally will you be immune to any form of attacks during the phase you use this and the following day phase, not including lynching.
+
+<strong>Win Condition</strong>
+
+Eliminate anyone that stands in the Traitor Coven&#39;s path.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-887386645119271023 class=chatlog__message-container data-message-id=887386645119271023><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-887386645119271023>09/14/2021 1:17 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>SURPRISE PRIEST!</strong>
+
+Anderson, <s>the Witch of Contradiction</s>, Priest of the Vatican Church - <s>Coven Traitors</s> Holy Vatican Churches High Priest.
+
+You have infiltrated the Coven in the name of the Holy Vatican Church, your real name is Alexander Anderson, a trained hunter of <s>vampires</s> <strong>Witches</strong>, your fake identity within the Coven however, is that of <strong>Alex, the Witch of Contradiction</strong>. A fitting name, for one that is unable to reproduce witchcraft, not being born with innate witch talent. You have a magical disguise making you look like one of the witches, but unlike witches, you wield holy magic, as well as an arsenal of weaponry to aid you in your hunt to eliminate the witches of the Coven in the Holy Vatican Churches&#39; name. For that matter you have joined the Traitors within the Coven, which also seek to eliminate as many witches as possible, to overthrow the Coven Leader, and take Control of the Coven. While they are a tool for you to abuse, you yourself do not really see them as more than that.
+
+<strong>Passive</strong>
+
+Holy Mantle: You are immune to attacks at night, but not to lingering injuries, or poisons.
+
+<strong>Night Ability</strong>
+
+Contradicting Magic: As you do not have the ability to wield witchcraft and use their incantations and lack the information for their brewery, you rely on your holy magic. Every night you may choose another player to blind with holy light, they will not receive any night feedback that night, and if not immune to role blocking will their action be stopped.</span> <span class=chatlog__edited-timestamp title="09/14/2021 1:18 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-887386679965548614 class=chatlog__message-container data-message-id=887386679965548614><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="09/14/2021 1:17 PM">13:17</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Day Ability</strong>
+
+Holy extermination Arsenal: You wield your blessed weapons to aid you in your hunt. Every day you may choose a player to attack, that player will start bleeding, and will die at the end of the following days night, if not treated before that.
+
+If visited by another player during that day phase, then that other player will learn that you also visited that same player during the day.
+You do not learn if anyone saw you visit.
+Your target is informed of bleeding once the day ends as you strike when the lynching takes place.
+
+<strong>Necronomicon</strong>
+
+As you are not a witch, but a priest of the holy church, you cannot wield the Necronomicon, should anyone attempt to pass it on to you, you will simply hold on to it for the night and then pass it on as is custom in order to not rouse suspicion.
+
+You are always the last to receive the Necronomicon, and the traitors Necronomicon.
+
+Should you receive the Traitors Necronomicon then:
+
+<strong>Traitors Necronomicon</strong>
+
+Dark Influence: You manage to utilise the forbidden and stronger Necronomicon to your advantage, boosting your physical abilities.
+
+Your bleeding caused by <strong>Holy extermination Arsenal</strong> can no longer be healed.
+
+<strong>Win Condition</strong>
+
+You win if either:
+
+- You are alive when the traitors win by parity. Ending the game in a traitor witch and your win.
+- You are alive, when all other witches are dead. Ending the game in your win alone.
+
+- If you have died and all other players are dead, or only the traitor witches remain, meaning your mission to exterminate the witches was successful. You and the traitor witches win.
+-&gt; This can also happen if all remaining players are affected by a lingering injury or poison, and nobody to heal it is left in the game. The game will end in your win in this case, even if a team other than the traitor witches would have won.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-887701325457010728 class=chatlog__message-container data-message-id=887701325457010728><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-887701325457010728>09/15/2021 10:08 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Leaf, Witch of the Wild - Coven 
+
+You are the witch dedicated to the Coven&#39;s crops and hunting duties. Your magic helps you grow and nurture plants, as well as enchant animals to follow you where ever you want them to go.
+
+<strong>Passive</strong>
+
+Enchanting Song: The first time anyone attempts to role block you, you will instead redirect them to your neighbour, one space down the alive list.
+
+<strong>Night Ability</strong>
+
+Growth: You rapidly grow plants around your targets house during the night, anyone visiting your target besides you will have their visit fail should it not be astral. The plants will soon wilt and die at the end of the night.
+
+You may use your growth magic three times during the game.
+
+<strong>Day Action</strong>
+
+Entangle: You may entangle another player in vine-line plants. Their voting will be stuck in place for the remainder of the day, and they cannot use day actions for the rest of it either. 
+
+You may not target the same player twice using this ability, role block immunity makes this ability fail, and your target is informed that they were entangled and stopped from voting and using day actions should you succeed.
+
+You can only use this ability during the first 24 hours of the day.
+
+<strong>Necronomicon Passive</strong>
+
+Drain mana from the wildlife: Your passive <strong>Enchanting Song</strong> is reset, should it have been activated already upon receiving the Necronomicon and you gain role block immunity for the day and night you hold it.
+
+<strong>Necronomicon Action</strong>
+
+Euthenize: You may decide on another player to magically put to sleep. They will be confirmed missing at the start of the following day and stay asleep until you die or the game ends. They count as not alive for the time they are asleep.
+
+- They will be announced as missing at the start of all days you are alive.
+
+<strong>Necronomicon passage</strong>
+
+You will lose The Necronomicon at the end of the night of the day you received it, regardless of if you decided to use it&#39;s action, or not.
+
+<strong>Wincon</strong>
+
+Eliminate anyone who opposes the Coven.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-888426145194835998 class=chatlog__message-container data-message-id=888426145194835998><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-888426145194835998>09/17/2021 10:08 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Gottem!!... ? hmm..</strong>
+
+Delphie, the All-Seeing Witch of Knowledge - Coven Traitors Leader
+
+You have always been the Coven Leader&#39;s left hand providing aid in both your magical abilities as well as your collected knowledge, granting the coven never seen before prosperity. In fact have you been the only factor doing so. You&#39;ve always been the hard working part, leading the coven on your own, while the Coven Leader didn&#39;t do anything but provide you more work to occupy your valuable time.
+One day you had enough and sought to change the coven, so that you could lead it yourself to a better and brighter future without being hindered by the current, rather narrow minded, Coven Leader.
+
+<strong>Passive</strong>
+
+Necronomicon Duplicator: During the first day, you will hold and produce a copy of the Necronomicon. You will finish it at the end of the first night and hold it during the following second day, should you be still alive then. 
+
+Influence: Due to your influence in the Coven will nobody dare to harm you. You are immune to direct attacks.
+
+<strong>Night Ability</strong>
+
+Eyes in the Sky: You are able to summon hawks, eagles and other birds to aid you as your eyes. Every night you may choose another player, you will know who they visited and who visited them.
+
+<strong>Day Ability</strong>
+
+Internal Documents: You may target a player every day, and learn if they are currently holding the Necronomicon or not, if yes then you will also learn the name of their Necronomicon ability.</span> <span class=chatlog__edited-timestamp title="09/17/2021 10:08 AM">(edited)</span></div></div></div></div><div id=chatlog__message-container-888426191462236191 class=chatlog__message-container data-message-id=888426191462236191><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="09/17/2021 10:08 AM">10:08</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Necronomicon Passive</strong>
+
+Improving the Necronomicon: During the second day, while holding the copied Necronomicon, you will improve it with your own knowledge, creating the traitor Necronomicon. You will hold the traitor necronomicon at the start of day 3. You will pass it on to the next traitor coven member should you die after that. If you die before the start of day three, then you will send the remaining members of the traitors a spiritual message from the afterlife, making them able to complete the traitor Necronomicon by the start of day 4.
+
+<strong>Necronomicon Action</strong>
+
+Oracle Delphie: During a night you are holding the Necronomicon, you are able to learn the name of the ability your target is using, and you will receive all night feedback your target would have received, even if they didn&#39;t receive it themselves.
+
+<strong>Necronomicon passage</strong>
+
+You will lose The Necronomicon at the end of the night of the day you received it, regardless of if you decided to use it&#39;s action, or not.</span></div></div></div></div><div id=chatlog__message-container-888426212702179329 class=chatlog__message-container data-message-id=888426212702179329><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="09/17/2021 10:08 AM">10:08</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Traitor Necronomicon Passive</strong>
+
+Overwhelming Mental Pressure: Once you receive the Traitor&#39;s Necronomicon you are able to emmit immense mental pressure towards those around you. As a side effect is no one able to deduce if you are on their side or not, so they will assume you are on their side, should they question your intentions. Additionally will anybody attempting to harm you with a lingering injury or poison be role blocked should they not be immune to it.
+
+<strong>Traitor Necronomicon Action</strong>
+
+Manipulate Lifelines: If you are holding the Traitor Necronomicon, then you may predict and then manipulate the death of another player every night through reading their magical lifelines and altering them to your liking. You may name the host a specific phase that is at the earliest the end of the following night. That player will die at the end of that phase even through protection or immunities.
+
+The player will know that &quot;someone read their magical lifeline and determined that they will die soon&quot;.
+The reading is not astral, but the attack will be. You are not seen visiting the player during the night or day they die, and the attack cannot be roleblocked or otherwise stopped and will definitely hit the player you chose.
+The player will only die if you are alive during the phase of their death.
+You can mark multiple players to die during the same phase, should you set night 3&#39;s on day 7 as well as night 4s and night 5s. Then they will all die at the end of day 7.
+
+<strong>Wincon</strong>
+
+Eliminate anyone that stands in the Coven Traitors path.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-889240442443550790 class=chatlog__message-container data-message-id=889240442443550790><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-889240442443550790>09/19/2021 4:04 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>i just flipping died lmfao</strong> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="Dead"
+    title="Dead"
+    src="https://cdn.discordapp.com/emojis/850041954200584202.png"> 
+
+Lunexia, the witchy girl - Coven Head
+
+You are the leader of the Coven. Everyone follows after your command without a spark of doubt on their mind.
+
+You will be the first able to use the Necronomicon. 
+You will receive it at the start of day two.
+
+<strong>Passive</strong>
+
+Motherly bond: You have a special spiritual link with your daughter, Lunarett, which you planted into her during her birth. You receive a private chat with her, although her intentions are unknown to you.
+Motherly influence: Your daughter is unable to harm you in any way, should she attempt to do so. If she does, you will be informed.
+
+<strong>Night ability</strong>
+
+Leaders&#39; command: Every night you may command one other witch to visit a target of your choice. You will be informed if the witch you commanded was successful in her action and you will receive all night feedback that the witch you commanded received. Your target will be informed of being controlled by the Coven&#39;s leader.
+
+Your daughter is immune to your commands.
+
+<strong>Day ability</strong>
+
+Veto: Once per game you may decide to Veto that days lynch, the lynched player will instead have their role name flipped, instead of dying, at the end of the day. You cannot use this action during the first day of the game.
+
+<strong>Necronomicon Passive</strong>
+
+Pure Leader: If you are holding the Necronomicon, then you are always seen as good to investigative results and immune to roleblocking.
+
+Veto: Should you hold the Necronomicon, you can use the Veto action again, even if the charge was already used.
+
+<strong>Necronomicon Ability</strong>
+
+Leader&#39;s Power: As a night action and if you are holding the Necronomicon, then you can decide to either piercingly stop another players action or basic attack another player once. You may not use this ability during the first night of the game.
+
+<strong>Necronomicon passage</strong>
+
+After you used the Necronomicon you will pass it on to your daughter.</span> <span class=chatlog__edited-timestamp title="09/19/2021 4:04 PM">(edited)</span></div></div></div></div><div id=chatlog__message-container-889240461422772244 class=chatlog__message-container data-message-id=889240461422772244><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="09/19/2021 4:04 PM">16:04</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>If your daughter died, then it will be passed on to someone else.
+Otherwise will it be passed on at the end of the night of the day you received it.
+
+<strong>Wincon</strong>
+
+Eliminate anyone who opposes the Coven.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-889687718278348841 class=chatlog__message-container data-message-id=889687718278348841><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/adb8f2dea46af4c7c55a467cefbbe529.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=Lunex#0727 data-user-id=135784580077715458>Lunexia on Osu!</span> <span class=chatlog__timestamp><a href=#chatlog__message-container-889687718278348841>09/20/2021 9:41 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>archiving</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 23 message(s)</div></div>
